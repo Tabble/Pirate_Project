@@ -6,7 +6,7 @@ public class ClickableTile : MonoBehaviour {
 
     public int GridPositionX;
     public int GridPositionY;
-    public TileMap Map;
+    public TileMapControllerSelfmade Map;
 
 
     private void OnMouseUp()

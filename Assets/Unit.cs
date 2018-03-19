@@ -7,7 +7,7 @@ public class Unit : MonoBehaviour {
     public int GridPositionX;
     public int GridPositionY;
 
-    public TileMap Map;
+    public TileMapControllerSelfmade Map;
 
     public List<Node> CurrentPath = null;
 
