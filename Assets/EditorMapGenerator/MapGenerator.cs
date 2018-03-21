@@ -7,7 +7,6 @@ public class MapGenerator : MonoBehaviour {
 
     public Transform TilePrefab;
     public Vector2 MapSize;
-    private List<Transform> generatedMap = null;
     private GameObject tileParent = null;
 
     void Start()
