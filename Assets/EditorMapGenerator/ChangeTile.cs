@@ -4,13 +4,20 @@ using UnityEngine;
 
 public class ChangeTile : MonoBehaviour {
 
+    public TileTypeCategory Category = TileTypeCategory.Water;
     public MeshRenderer Renderer;
-    public Material[] DefaultMaterial;
+    public Material Water;
+    public Material Island;
+    public Material ShallowWater;
+    public Material Goal;
+    public Material Start;
+
     private int matIndex = 0;
+    private const int MAX_TILE_TYPE_CATEGORIES = 5;
     
-	public void ChangeMaterial()
+	public void OnChangeTile()
     {
-        if(matIndex < DefaultMaterial.Length - 1)
+        if(matIndex < MAX_TILE_TYPE_CATEGORIES - 1)
         {
             matIndex++;
         }
@@ -18,6 +25,34 @@ public class ChangeTile : MonoBehaviour {
         {
             matIndex = 0;
         }
-        Renderer.material = DefaultMaterial[matIndex];
+        ChangeCategory();
+        ChangeMaterial();
+    }
+
+    private void ChangeCategory()
+    {
+        Category = (TileTypeCategory) matIndex;
+    }
+
+    private void ChangeMaterial()
+    {
+        switch (Category)
+        {
+            case TileTypeCategory.Goal:
+                Renderer.material = Goal;
+                break;
+            case TileTypeCategory.Island:
+                Renderer.material = Island;
+                break;
+            case TileTypeCategory.ShallowWater:
+                Renderer.material = ShallowWater;
+                break;
+            case TileTypeCategory.Start:
+                Renderer.material = Start;
+                break;
+            case TileTypeCategory.Water:
+                Renderer.material = Water;
+                break;
+        }
     }
 }

@@ -16,7 +16,7 @@ public class ChangeTileEditor : Editor{
             {
                 if (hit.collider.gameObject.GetComponent<ChangeTile>() != null)
                 {
-                    hit.collider.gameObject.GetComponent<ChangeTile>().ChangeMaterial();
+                    hit.collider.gameObject.GetComponent<ChangeTile>().OnChangeTile();
                 }
             }
         }
