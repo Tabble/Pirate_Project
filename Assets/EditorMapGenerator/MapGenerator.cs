@@ -33,8 +33,16 @@ public class MapGenerator : MonoBehaviour {
             {
                 Vector3 tilePosition = new Vector3(-MapSize.x / 2 + 0.5f + x, 0, -MapSize.y / 2 + 0.5f + y);
                 Transform newTile = Instantiate(TilePrefab, tilePosition, Quaternion.Euler(Vector3.right * 90)) as Transform;
+                newTile.GetComponent<ChangeTile>().PositionX = x;
+                newTile.GetComponent<ChangeTile>().PositionY= y;
                 newTile.SetParent(tileParent.transform);
             }
         }
+    }
+
+    public void SaveMap()
+    {
+        ChangeTile[] tiles = tileParent.GetComponentsInChildren<ChangeTile>();
+        Debug.Log(string.Format("[MapGenerator] save {0} tiles to a map.", tiles.Length));
     }
 }

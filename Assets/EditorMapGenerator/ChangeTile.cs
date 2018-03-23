@@ -12,6 +12,9 @@ public class ChangeTile : MonoBehaviour {
     public Material Goal;
     public Material Start;
 
+    public int PositionX = 0;
+    public int PositionY = 0;
+
     private int matIndex = 0;
     private const int MAX_TILE_TYPE_CATEGORIES = 5;
     

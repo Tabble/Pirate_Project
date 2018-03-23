@@ -451,19 +451,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerUnit: {fileID: 706019089}
   tileTypes:
-  - Category: 1
+  - Category: 0
     TilePrefab: {fileID: 1356734555446448, guid: d1e5dc26cb3c89f408cd970cc08c6871,
       type: 2}
     MovementCost: 1
-  - Category: 3
+  - Category: 2
     TilePrefab: {fileID: 1806349410638704, guid: c73358bd755dc6d4791d3cce17d4ee2b,
       type: 2}
     MovementCost: 2
-  - Category: 2
+  - Category: 1
     TilePrefab: {fileID: 1920267185717050, guid: 3c4a932d97078074babccf2dd8f30497,
       type: 2}
     MovementCost: 1e+19
-  - Category: 4
+  - Category: 3
     TilePrefab: {fileID: 1695457636721666, guid: 7e5a60863d9338645a91ca43561d27d6,
       type: 2}
     MovementCost: 1

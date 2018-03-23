@@ -15,6 +15,11 @@ public class MapEditor : Editor {
             MapGenerator map = target as MapGenerator;
             map.GenerateMap();
         }
+        if(GUILayout.Button("Save Map"))
+        {
+            MapGenerator map = target as MapGenerator;
+            map.SaveMap();
+        }
         
     }
 }
