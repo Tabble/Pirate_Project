@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeTile : MonoBehaviour {
+
+
 
     public TileTypeCategory Category = TileTypeCategory.Water;
     public MeshRenderer Renderer;
@@ -37,7 +40,7 @@ public class ChangeTile : MonoBehaviour {
         Category = (TileTypeCategory) matIndex;
     }
 
-    private void ChangeMaterial()
+    public void ChangeMaterial()
     {
         switch (Category)
         {
@@ -57,5 +60,31 @@ public class ChangeTile : MonoBehaviour {
                 Renderer.material = Water;
                 break;
         }
+    }
+
+    public JSONObject GetTileJson()
+    {
+        JSONObject tileJson = new JSONObject();
+        tileJson.AddField(GameConstants.CATEGORY_KEY, Category.ToString());
+        tileJson.AddField(GameConstants.POSITION_X_KEY, PositionX.ToString());
+        tileJson.AddField(GameConstants.POSITION_Y_KEY, PositionY.ToString());
+        return tileJson;
+    }
+}
+
+[Serializable]
+public class TileVO
+{
+    public TileTypeCategory Category = TileTypeCategory.Water;
+    public int PositionX = 0;
+    public int PositionY = 0;
+
+    public JSONObject GetTileJson()
+    {
+        JSONObject tileJson = new JSONObject();
+        tileJson.AddField(GameConstants.CATEGORY_KEY, Category.ToString());
+        tileJson.AddField(GameConstants.POSITION_X_KEY, PositionX.ToString());
+        tileJson.AddField(GameConstants.POSITION_Y_KEY, PositionY.ToString());
+        return tileJson;
     }
 }

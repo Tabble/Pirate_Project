@@ -2,24 +2,82 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.IO;
 
 [CustomEditor(typeof(MapGenerator))]
 public class MapEditor : Editor {
 
+
+    private MapGenerator map;
+    private int currentMapID = 0;
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+        //base.OnInspectorGUI();
+        map = target as MapGenerator;
+        if (GUILayout.Button("Reset Map"))
+        {
+            
+            map.GenerateMapToDrawOn();
+            currentMapID = 0;
+        }
+        if(GUILayout.Button("Save NEW Map"))
+        {
+            
+            map.SaveNewMap();
+        }
+        if (GUILayout.Button("LoadMaps"))
+        {
+           
+            map.LoadMaps();
+        }
+        GUILayout.Label("Current ID :" + currentMapID.ToString(), EditorStyles.boldLabel);
+        DrawMapIdsInspector();
 
-        if(GUILayout.Button("Reser Map"))
+
+    }
+
+    private void DrawMapIdsInspector()
+    {
+        GUILayout.Space(5);
+        for(int i = 0; i < map.MapIds.Length; i++)
         {
-            MapGenerator map = target as MapGenerator;
-            map.GenerateMap();
+            DrawMapIds(i);
         }
-        if(GUILayout.Button("Save Map"))
+    }
+
+    private void DrawMapIds(int index)
+    {
+        if(index < 0 || index >= map.MapIds.Length)
         {
-            MapGenerator map = target as MapGenerator;
-            map.SaveMap();
+            return;
         }
-        
+        GUILayout.BeginHorizontal();
+        {
+            GUILayout.Label("Map IDs", EditorStyles.boldLabel);
+            GUILayout.Label(map.MapIds[index].ToString());
+            if (GUILayout.Button("Show"))
+            {
+                map.ShowMap(map.MapIds[index]);
+                currentMapID = map.MapIds[index];
+            }
+            if (GUILayout.Button("Overwrite"))
+            {
+                
+                if(currentMapID != map.MapIds[index])
+                {
+                    EditorApplication.Beep();
+                    if (EditorUtility.DisplayDialog("Wrong ID", "Do you really want to overwrite " +
+                        map.MapIds[index] + " when you chose map ID " + currentMapID,"overwrite","cancel")) 
+                    {
+                        map.OverwrideMapWithID(map.MapIds[index]);
+                    }
+                }
+                else
+                {
+                    map.OverwrideMapWithID(map.MapIds[index]);
+                }
+            }
+        }
+        GUILayout.EndHorizontal();
     }
 }
