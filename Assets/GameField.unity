@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc75f459c2b0bf4b992b3440cea0875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MapID: 13
   PlayerUnit: {fileID: 706019089}
   tileTypes:
   - Category: 0
@@ -465,6 +466,10 @@ MonoBehaviour:
     MovementCost: 1e+19
   - Category: 3
     TilePrefab: {fileID: 1695457636721666, guid: 7e5a60863d9338645a91ca43561d27d6,
+      type: 2}
+    MovementCost: 1
+  - Category: 4
+    TilePrefab: {fileID: 1695457636721666, guid: e0e4d63e2ecae6a48a871bc689cc8b68,
       type: 2}
     MovementCost: 1
 --- !u!1 &1871292401

@@ -20,17 +20,17 @@ public class Unit : MonoBehaviour {
 
     private void Update()
     {
-        //if(CurrentPath != null)
-        //{
-        //    int currentNode = 0;
-        //    while(currentNode < CurrentPath.Count -1 )
-        //    {
-        //        Vector3 start = Map.TileCoordinatsToWoldCoordinates(CurrentPath[currentNode].X, CurrentPath[currentNode].Y);
-        //        Vector3 end = Map.TileCoordinatsToWoldCoordinates(CurrentPath[currentNode + 1].X, CurrentPath[currentNode +1].Y);
-        //        Debug.DrawLine(start, end, Color.red);
-        //        currentNode++;
-        //    }
-        //}
+        if (CurrentPath != null)
+        {
+            int currentNode = 0;
+            while (currentNode < CurrentPath.Count - 1)
+            {
+                Vector3 start = Map.TileCoordinatsToWoldCoordinates(CurrentPath[currentNode].X, CurrentPath[currentNode].Y);
+                Vector3 end = Map.TileCoordinatsToWoldCoordinates(CurrentPath[currentNode + 1].X, CurrentPath[currentNode + 1].Y);
+                Debug.DrawLine(start, end, Color.red);
+                currentNode++;
+            }
+        }
     }
 
 }

@@ -94,6 +94,12 @@ public class MapGenerator : MonoBehaviour {
         OverrideMap(ID);
     }
 
+    public void DeleteMapWithID(int ID)
+    {
+        //TODO write function
+        Debug.Log("Delete Map with ID: " + ID);
+    }
+
     public void LoadMaps()
     {
         JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
@@ -121,8 +127,8 @@ public class MapGenerator : MonoBehaviour {
                     Debug.Log("Enum not defined: " + mapJson[i][t][GameConstants.CATEGORY_KEY].str);
                 }
 
-                newTile.PositionX = (int)mapJson[i][t][GameConstants.POSITION_X_KEY].i;
-                newTile.PositionY = (int)mapJson[i][t][GameConstants.POSITION_Y_KEY].i;
+                newTile.PositionX = int.Parse(mapJson[i][t][GameConstants.POSITION_X_KEY].str);
+                newTile.PositionY = int.Parse(mapJson[i][t][GameConstants.POSITION_Y_KEY].str);
                 changeTiles.Add(newTile);
             }
             newMap.SetTiles(changeTiles.ToArray());

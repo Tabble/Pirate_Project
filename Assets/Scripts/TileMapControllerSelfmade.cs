@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
-using System.Linq;
 
 public class TileMapControllerSelfmade : MonoBehaviour {
 
+    public int MapID = 12;
     public GameObject PlayerUnit;
     public TileType[] tileTypes;
     Node[,] graph;
@@ -15,17 +18,20 @@ public class TileMapControllerSelfmade : MonoBehaviour {
     Node targetNode;
     TileType currentTileUnitIsOn;
     TileType nextTileUnitMovesTo;
-    
-    
+    private List<MapVO> Maps = new List<MapVO>();
+    private Vector2 playerStart = new Vector2();
+
+
     private void Start()
     {
         // create default map tiles
         // Setup selected 
         PlayerUnit.GetComponent<Unit>().Map = this;
-        PlayerUnit.GetComponent<Unit>().SetCurrentPositionInGrid(3, 1);
+       
         tiles = new TileTypeCategory[mapSizeX, mapSizeY];
 
         GenerateMapData();
+        PlayerUnit.GetComponent<Unit>().SetCurrentPositionInGrid((int)playerStart.x, (int)playerStart.y);
         // instantiate visual prefabs
         GeneratePathfindingPath();
         GenerateMapVisuals();
@@ -34,43 +40,54 @@ public class TileMapControllerSelfmade : MonoBehaviour {
 
     private void GenerateMapData()
     {
-        for (int x = 0; x < mapSizeX; x++)
+        //for (int x = 0; x < mapSizeX; x++)
+        //{
+        //    for (int y = 0; y < mapSizeY; y++)
+        //    {
+        //        tiles[x, y] = TileTypeCategory.Water;
+        //    }
+        //}
+
+        //for (int x = 3; x <= 5; x++)
+        //{
+        //    for (int y = 0; y < 4; y++)
+        //    {
+        //        tiles[x, y] = TileTypeCategory.ShallowWater;
+        //    }
+        //}
+
+        ////make an Island
+        //tiles[4, 4] = TileTypeCategory.Island;
+        //tiles[5, 4] = TileTypeCategory.Island;
+        //tiles[6, 4] = TileTypeCategory.Island;
+        //tiles[7, 4] = TileTypeCategory.Island;
+        //tiles[8, 4] = TileTypeCategory.Island;
+        //tiles[4, 5] = TileTypeCategory.Island;
+        //tiles[8, 6] = TileTypeCategory.Island;
+        //tiles[0, 5] = TileTypeCategory.Island;
+        //tiles[1, 5] = TileTypeCategory.Island;
+        //tiles[2, 6] = TileTypeCategory.ShallowWater;
+        //tiles[3, 6] = TileTypeCategory.ShallowWater;
+        //tiles[4, 6] = TileTypeCategory.ShallowWater;
+        //tiles[2, 5] = TileTypeCategory.ShallowWater;
+        //tiles[3, 5] = TileTypeCategory.ShallowWater;
+
+        //// make a goal
+        //tiles[9, 8] = TileTypeCategory.Goal;
+
+        LoadMaps();
+        MapVO mapWithID = Maps.Find(x => x.MapID == MapID);
+        foreach (var tile in mapWithID.Tiles)
         {
-            for (int y = 0; y < mapSizeY; y++)
+            if (tile.Category == TileTypeCategory.Start)
             {
-                tiles[x, y] = TileTypeCategory.Water;
+                playerStart = new Vector2(tile.PositionX, tile.PositionY);
             }
+            tiles[tile.PositionX, tile.PositionY] = tile.Category;
         }
-
-        for(int x = 3; x <= 5; x ++)
-        {
-            for(int y = 0; y < 4; y++)
-            {
-                tiles[x, y] = TileTypeCategory.ShallowWater;
-            }
-        }
-
-        //make an Island
-        tiles[4, 4] = TileTypeCategory.Island;
-        tiles[5, 4] = TileTypeCategory.Island;
-        tiles[6, 4] = TileTypeCategory.Island;
-        tiles[7, 4] = TileTypeCategory.Island;
-        tiles[8, 4] = TileTypeCategory.Island;
-        tiles[4, 5] = TileTypeCategory.Island;
-        tiles[8, 6] = TileTypeCategory.Island;
-        tiles[0, 5] = TileTypeCategory.Island;
-        tiles[1, 5] = TileTypeCategory.Island;
-        tiles[2, 6] = TileTypeCategory.ShallowWater;
-        tiles[3, 6] = TileTypeCategory.ShallowWater;
-        tiles[4, 6] = TileTypeCategory.ShallowWater;
-        tiles[2, 5] = TileTypeCategory.ShallowWater;
-        tiles[3, 5] = TileTypeCategory.ShallowWater;
-
-        // make a goal
-        tiles[9, 8] = TileTypeCategory.Goal;
     }
 
-   private void GeneratePathfindingPath()
+    private void GeneratePathfindingPath()
     {
         graph = new Node[mapSizeX, mapSizeY];
         for (int x = 0; x < mapSizeX; x++)
@@ -298,5 +315,63 @@ public class TileMapControllerSelfmade : MonoBehaviour {
         {
             return false;
         }
+    }
+
+    public void LoadMaps()
+    {
+        JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
+        Maps = new List<MapVO>();
+        List<int> MapIDs = new List<int>();
+        //Debug.Log("[Json] show json: " + mapJson.ToString());
+        for (int i = 0; i < mapJson.list.Count; i++)
+        {
+            //Debug.Log("[Json] maps " + mapJson[i].ToString());
+            MapVO newMap = new MapVO();
+            newMap.SetID((int)mapJson[i][0].i);
+            MapIDs.Add(newMap.MapID);
+            Debug.Log("Map ID: " + newMap.MapID);
+            List<TileVO> changeTiles = new List<TileVO>();
+            for (int t = 1; t < mapJson[i].Count; t++)
+            {
+                //Debug.Log("tiles:" + mapJson[i][t][0].ToString());
+                TileVO newTile = new TileVO();
+                if (Enum.IsDefined(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str))
+                {
+                    newTile.Category = (TileTypeCategory)Enum.Parse(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+                }
+                else
+                {
+                    Debug.Log("Enum not defined: " + mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+                }
+
+                newTile.PositionX = int.Parse(mapJson[i][t][GameConstants.POSITION_X_KEY].str);
+                newTile.PositionY = int.Parse(mapJson[i][t][GameConstants.POSITION_Y_KEY].str);
+                changeTiles.Add(newTile);
+            }
+            newMap.SetTiles(changeTiles.ToArray());
+            Maps.Add(newMap);
+        }
+    }
+
+    public static string LoadString(string fileName)
+    {
+        string loadedData = default(string);
+        string filePath = Application.persistentDataPath + "/" + fileName;
+        if (File.Exists(filePath))
+        {
+            using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                try
+                {
+                    BinaryFormatter bf = new BinaryFormatter();
+                    loadedData = (string)bf.Deserialize(fileStream);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+        }
+        return loadedData == default(string) ? "" : loadedData;
     }
 }

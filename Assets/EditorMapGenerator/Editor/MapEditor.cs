@@ -53,7 +53,7 @@ public class MapEditor : Editor {
         }
         GUILayout.BeginHorizontal();
         {
-            GUILayout.Label("Map IDs", EditorStyles.boldLabel);
+            GUILayout.Label("Map ID", EditorStyles.boldLabel);
             GUILayout.Label(map.MapIds[index].ToString());
             if (GUILayout.Button("Show"))
             {
@@ -75,6 +75,16 @@ public class MapEditor : Editor {
                 else
                 {
                     map.OverwrideMapWithID(map.MapIds[index]);
+                }
+            }
+
+            if (GUILayout.Button("Delete"))
+            {
+                EditorApplication.Beep();
+                if(EditorUtility.DisplayDialog("Delete", "Are you sure you want to delete this map with ID" + map.MapIds[index],
+                    "Delete", "Cancel"))
+                {
+                    map.DeleteMapWithID(map.MapIds[index]);
                 }
             }
         }
