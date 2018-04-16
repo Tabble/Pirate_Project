@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "MapsSaver", menuName = "MapSaver", order = 1)]
@@ -18,6 +19,7 @@ public class MapsSaver : ScriptableObject {
         {
             AllMaps.Add(newMap);
         }
+        AssetDatabase.SaveAssets();
     }
 
     public MapVO GetMapWithID(int id)

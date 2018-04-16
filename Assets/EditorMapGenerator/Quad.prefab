@@ -112,7 +112,9 @@ MonoBehaviour:
   Category: 0
   Renderer: {fileID: 23573124330929132}
   Water: {fileID: 2100000, guid: 6a4e8f0937348b44eabae9f064651e97, type: 2}
-  Island: {fileID: 2100000, guid: 1697d0469302b084185dd74679bb713a, type: 2}
+  Island: {fileID: 2100000, guid: e001817e52422a94b88601ed9dfe567f, type: 2}
   ShallowWater: {fileID: 2100000, guid: 4d3fd51e5c3b4254aad47defb758d102, type: 2}
   Goal: {fileID: 2100000, guid: 57900f7bf5434364a928ff64ca12b345, type: 2}
   Start: {fileID: 2100000, guid: d9e2d0a6f1060a04e8617133416cb248, type: 2}
+  PositionX: 0
+  PositionY: 0
