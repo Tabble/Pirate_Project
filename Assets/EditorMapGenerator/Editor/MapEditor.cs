@@ -7,13 +7,21 @@ using System.IO;
 [CustomEditor(typeof(MapGenerator))]
 public class MapEditor : Editor {
 
-
+    public MapsSaver MapsSaver;
     private MapGenerator map;
     private int currentMapID = 0;
     public override void OnInspectorGUI()
     {
-        //base.OnInspectorGUI();
         map = target as MapGenerator;
+        
+        if (map.MapsSaver == null)
+        {
+            base.OnInspectorGUI();
+        }
+        if(map.ConsistentMapID == null)
+        {
+            base.OnInspectorGUI();
+        }
         if (GUILayout.Button("Reset Map"))
         {
             

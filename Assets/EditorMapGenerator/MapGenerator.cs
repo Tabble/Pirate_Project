@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class MapGenerator : MonoBehaviour {
 
-
+    public ConsistentMapID ConsistentMapID;
+    public MapsSaver MapsSaver;
     public Transform TilePrefab;
     public Vector2 MapSize;
     private GameObject tileParent = null;
@@ -57,7 +58,8 @@ public class MapGenerator : MonoBehaviour {
             DestroyImmediate(tileParent);
             tileParent = new GameObject("Tile Parent");
         }
-        MapVO mapWithID = Maps.Find(x => x.MapID == id);
+        MapVO mapWithID = MapsSaver.GetMapWithID(id);
+        //MapVO mapWithID = Maps.Find(x => x.MapID == id);
         List<ChangeTile> tiles = new List<ChangeTile>();
         if(mapWithID != null)
         {
@@ -97,80 +99,106 @@ public class MapGenerator : MonoBehaviour {
     public void DeleteMapWithID(int ID)
     {
         //TODO write function
-        Debug.Log("Delete Map with ID: " + ID);
+        MapsSaver.DeleteMapWithID(ID);
+        LoadMaps();
     }
 
     public void LoadMaps()
     {
-        JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
-        Maps = new List<MapVO>();
-        List<int> MapIDs = new List<int>();
-        //Debug.Log("[Json] show json: " + mapJson.ToString());
-       for(int i = 0; i < mapJson.list.Count; i++)
+        if(MapsSaver.LoadAllMaps() != null)
         {
-            //Debug.Log("[Json] maps " + mapJson[i].ToString());
-            MapVO newMap = new MapVO();
-            newMap.SetID((int)mapJson[i][0].i);
-            MapIDs.Add(newMap.MapID);
-            Debug.Log("Map ID: " + newMap.MapID);
-            List<TileVO> changeTiles = new List<TileVO>();
-            for (int t = 1; t < mapJson[i].Count; t++)
+            Maps = MapsSaver.LoadAllMaps();
+            List<int> ids = new List<int>();
+            foreach(var map in Maps)
             {
-                //Debug.Log("tiles:" + mapJson[i][t][0].ToString());
-                TileVO newTile = new TileVO();
-                if (Enum.IsDefined(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str))
-                {
-                    newTile.Category = (TileTypeCategory)Enum.Parse(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str);
-                }
-                else
-                {
-                    Debug.Log("Enum not defined: " + mapJson[i][t][GameConstants.CATEGORY_KEY].str);
-                }
-
-                newTile.PositionX = int.Parse(mapJson[i][t][GameConstants.POSITION_X_KEY].str);
-                newTile.PositionY = int.Parse(mapJson[i][t][GameConstants.POSITION_Y_KEY].str);
-                changeTiles.Add(newTile);
+                ids.Add(map.MapID);
             }
-            newMap.SetTiles(changeTiles.ToArray());
-            Maps.Add(newMap);
+            MapIds = ids.ToArray();
         }
-        MapIds = MapIDs.ToArray();
+        else
+        {
+            Debug.Log("[MapGenerator] no maps saved");
+            //JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
+            //Maps = new List<MapVO>();
+            //List<int> MapIDs = new List<int>();
+            ////Debug.Log("[Json] show json: " + mapJson.ToString());
+            //for (int i = 0; i < mapJson.list.Count; i++)
+            //{
+            //    //Debug.Log("[Json] maps " + mapJson[i].ToString());
+            //    MapVO newMap = new MapVO();
+            //    newMap.SetID((int)mapJson[i][0].i);
+            //    MapIDs.Add(newMap.MapID);
+            //    Debug.Log("Map ID: " + newMap.MapID);
+            //    List<TileVO> changeTiles = new List<TileVO>();
+            //    for (int t = 1; t < mapJson[i].Count; t++)
+            //    {
+            //        //Debug.Log("tiles:" + mapJson[i][t][0].ToString());
+            //        TileVO newTile = new TileVO();
+            //        if (Enum.IsDefined(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str))
+            //        {
+            //            newTile.Category = (TileTypeCategory)Enum.Parse(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+            //        }
+            //        else
+            //        {
+            //            Debug.Log("Enum not defined: " + mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+            //        }
+
+            //        newTile.PositionX = int.Parse(mapJson[i][t][GameConstants.POSITION_X_KEY].str);
+            //        newTile.PositionY = int.Parse(mapJson[i][t][GameConstants.POSITION_Y_KEY].str);
+            //        changeTiles.Add(newTile);
+            //    }
+            //    newMap.SetTiles(changeTiles.ToArray());
+            //    Maps.Add(newMap);
+            //}
+            //MapIds = MapIDs.ToArray();
+            //MapsSaver.SetAllMaps(Maps);
+        }
+        
 
     }
 
     public void SaveNewMap()
     {
-        JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
+        //JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
         
         ChangeTile[] tiles = tileParent.GetComponentsInChildren<ChangeTile>();
-        if (PlayerPrefs.HasKey(GameConstants.MAP_ID_KEY))
-        {
-            mapID = PlayerPrefs.GetInt(GameConstants.MAP_ID_KEY, 0);
-            mapID++;
-        }
-        else
-        {
-            mapID = 0;
-        }
-        PlayerPrefs.SetInt(GameConstants.MAP_ID_KEY, mapID);
-        PlayerPrefs.Save();
-        JSONObject map = new JSONObject();
-        map.AddField(GameConstants.MAP_ID_KEY, mapID);
+        mapID = ConsistentMapID.GetConsistantID();
+        //if (PlayerPrefs.HasKey(GameConstants.MAP_ID_KEY))
+        //{
+        //    mapID = PlayerPrefs.GetInt(GameConstants.MAP_ID_KEY, 0);
+        //    mapID++;
+        //}
+        //else
+        //{
+        //    mapID = 0;
+        //}
+        //PlayerPrefs.SetInt(GameConstants.MAP_ID_KEY, mapID);
+        //PlayerPrefs.Save();
+        //JSONObject map = new JSONObject();
+        //map.AddField(GameConstants.MAP_ID_KEY, mapID);
+        List<TileVO> tileVOs = new List<TileVO>();
         foreach(var tile in tiles)
         {
-            map.Add(tile.GetTileJson());
+            //map.Add(tile.GetTileJson());
+            tileVOs.Add(new TileVO(tile.Category, tile.PositionX, tile.PositionY));
+
         }
-        mapJson.Add(map);
-        SaveString(GameConstants.MAP_FILE_LOCATION, mapJson.ToString());
+        MapVO newMap = new MapVO();
+        newMap.SetID(mapID);
+        newMap.SetTiles(tileVOs.ToArray());
+        MapsSaver.AddNewMap(newMap);
+        //mapJson.Add(map);
+        //SaveString(GameConstants.MAP_FILE_LOCATION, mapJson.ToString());
         Debug.Log(string.Format("[MapGenerator] save {0} tiles to a map.", tiles.Length));
         LoadMaps();
     }
 
     public void OverrideMap(int id)
     {
-        JSONObject newMaps = new JSONObject();
+        //JSONObject newMaps = new JSONObject();
         ChangeTile[] tiles = tileParent.GetComponentsInChildren<ChangeTile>();
-        MapVO mapWithID = Maps.Find(x => x.MapID == id);
+        MapVO mapWithID = MapsSaver.GetMapWithID(id);
+        //MapVO mapWithID = Maps.Find(x => x.MapID == id);
         
         if (mapWithID != null)
         {
@@ -180,55 +208,56 @@ public class MapGenerator : MonoBehaviour {
                 mapWithID.Tiles[i].PositionX = tiles[i].PositionX;
                 mapWithID.Tiles[i].PositionY = tiles[i].PositionY;
             }
+            MapsSaver.OverrideMapWithID(id, mapWithID);
         }
         else
         {
             Debug.Log("[Overwrite Tile] no map with id found");
         }
-        foreach(var m in Maps)
-        {
-            JSONObject map = new JSONObject();
-            map.AddField(GameConstants.MAP_ID_KEY, m.MapID);
-            foreach(var tile in m.Tiles)
-            {
-                map.Add(tile.GetTileJson());
-            }
-            newMaps.Add(map);
-        }
-        SaveString(GameConstants.MAP_FILE_LOCATION, newMaps.ToString());
+        //foreach(var m in Maps)
+        //{
+        //    JSONObject map = new JSONObject();
+        //    map.AddField(GameConstants.MAP_ID_KEY, m.MapID);
+        //    foreach(var tile in m.Tiles)
+        //    {
+        //        map.Add(tile.GetTileJson());
+        //    }
+        //    newMaps.Add(map);
+        //}
+        //SaveString(GameConstants.MAP_FILE_LOCATION, newMaps.ToString());
         LoadMaps();
     }
 
-    public void SaveString(string fileName, string data)
-    {
-        using (FileStream fileStream = new FileStream(Application.persistentDataPath + "/" + fileName, FileMode.Create, FileAccess.ReadWrite))
-        {
-            BinaryFormatter bf = new BinaryFormatter();
-            bf.Serialize(fileStream, data);
-        }
-    }
+    //public void SaveString(string fileName, string data)
+    //{
+    //    using (FileStream fileStream = new FileStream(Application.persistentDataPath + "/" + fileName, FileMode.Create, FileAccess.ReadWrite))
+    //    {
+    //        BinaryFormatter bf = new BinaryFormatter();
+    //        bf.Serialize(fileStream, data);
+    //    }
+    //}
 
-    public static string LoadString(string fileName)
-    {
-        string loadedData = default(string);
-        string filePath = Application.persistentDataPath + "/" + fileName;
-        if (File.Exists(filePath))
-        {
-            using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-            {
-                try
-                {
-                    BinaryFormatter bf = new BinaryFormatter();
-                    loadedData = (string)bf.Deserialize(fileStream);
-                }
-                catch (Exception)
-                {
+    //public static string LoadString(string fileName)
+    //{
+    //    string loadedData = default(string);
+    //    string filePath = Application.persistentDataPath + "/" + fileName;
+    //    if (File.Exists(filePath))
+    //    {
+    //        using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+    //        {
+    //            try
+    //            {
+    //                BinaryFormatter bf = new BinaryFormatter();
+    //                loadedData = (string)bf.Deserialize(fileStream);
+    //            }
+    //            catch (Exception)
+    //            {
 
-                }
-            }
-        }
-        return loadedData == default(string) ? "" : loadedData;
-    }
+    //            }
+    //        }
+    //    }
+    //    return loadedData == default(string) ? "" : loadedData;
+    //}
 
 }
 

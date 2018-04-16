@@ -79,6 +79,18 @@ public class TileVO
     public int PositionX = 0;
     public int PositionY = 0;
 
+    public TileVO()
+    {
+
+    }
+
+    public TileVO(TileTypeCategory category, int x, int y)
+    {
+        Category = category;
+        PositionX = x;
+        PositionY = y;
+    }
+
     public JSONObject GetTileJson()
     {
         JSONObject tileJson = new JSONObject();
