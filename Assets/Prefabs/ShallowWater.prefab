@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4379405870206616}
   - component: {fileID: 33280218847529600}
-  - component: {fileID: 65203416644156480}
+  - component: {fileID: 64876148761289746}
   - component: {fileID: 23210553742601770}
-  - component: {fileID: 114911456312674880}
+  - component: {fileID: 114245364426587648}
   m_Layer: 0
   m_Name: ShallowWater
   m_TagString: Untagged
@@ -83,9 +83,9 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1806349410638704}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65203416644156480
-BoxCollider:
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &64876148761289746
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -93,10 +93,12 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114911456312674880
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &114245364426587648
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -104,9 +106,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1806349410638704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2441ec1313daff14da91033374445eca, type: 3}
+  m_Script: {fileID: 11500000, guid: 4645e951f0662fe4fb10383dd9474c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   GridPositionX: 0
   GridPositionY: 0
   Map: {fileID: 0}
+  MeshRenderer: {fileID: 23210553742601770}
+  RandomMaterials:
+  - {fileID: 2100000, guid: 5cc8293de6fc93f4da0e6a5e7a8f8f58, type: 2}
+  - {fileID: 2100000, guid: 4d3fd51e5c3b4254aad47defb758d102, type: 2}

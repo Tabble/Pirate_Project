@@ -449,7 +449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc75f459c2b0bf4b992b3440cea0875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapID: 13
+  MapsSaver: {fileID: 11400000, guid: 606475eda6798af438cb24da13d53b98, type: 2}
+  MapID: 1
   PlayerUnit: {fileID: 706019089}
   tileTypes:
   - Category: 0

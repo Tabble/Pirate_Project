@@ -7,6 +7,7 @@ using UnityEngine;
 
 public class TileMapControllerSelfmade : MonoBehaviour {
 
+    public MapsSaver MapsSaver;
     public int MapID = 12;
     public GameObject PlayerUnit;
     public TileType[] tileTypes;
@@ -144,6 +145,7 @@ public class TileMapControllerSelfmade : MonoBehaviour {
                     ct.GridPositionX = x;
                     ct.GridPositionY = y;
                     ct.Map = this;
+                    ct.HandleTileMaterial();
                     if(tt.Category == TileTypeCategory.Goal)
                     {
                         targetNode = new Node();
@@ -319,59 +321,65 @@ public class TileMapControllerSelfmade : MonoBehaviour {
 
     public void LoadMaps()
     {
-        JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
-        Maps = new List<MapVO>();
-        List<int> MapIDs = new List<int>();
-        //Debug.Log("[Json] show json: " + mapJson.ToString());
-        for (int i = 0; i < mapJson.list.Count; i++)
-        {
-            //Debug.Log("[Json] maps " + mapJson[i].ToString());
-            MapVO newMap = new MapVO();
-            newMap.SetID((int)mapJson[i][0].i);
-            MapIDs.Add(newMap.MapID);
-            Debug.Log("Map ID: " + newMap.MapID);
-            List<TileVO> changeTiles = new List<TileVO>();
-            for (int t = 1; t < mapJson[i].Count; t++)
-            {
-                //Debug.Log("tiles:" + mapJson[i][t][0].ToString());
-                TileVO newTile = new TileVO();
-                if (Enum.IsDefined(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str))
-                {
-                    newTile.Category = (TileTypeCategory)Enum.Parse(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str);
-                }
-                else
-                {
-                    Debug.Log("Enum not defined: " + mapJson[i][t][GameConstants.CATEGORY_KEY].str);
-                }
+        //JSONObject mapJson = new JSONObject(LoadString(GameConstants.MAP_FILE_LOCATION));
+        //Maps = new List<MapVO>();
+        //List<int> MapIDs = new List<int>();
+        ////Debug.Log("[Json] show json: " + mapJson.ToString());
+        //for (int i = 0; i < mapJson.list.Count; i++)
+        //{
+        //    //Debug.Log("[Json] maps " + mapJson[i].ToString());
+        //    MapVO newMap = new MapVO();
+        //    newMap.SetID((int)mapJson[i][0].i);
+        //    MapIDs.Add(newMap.MapID);
+        //    Debug.Log("Map ID: " + newMap.MapID);
+        //    List<TileVO> changeTiles = new List<TileVO>();
+        //    for (int t = 1; t < mapJson[i].Count; t++)
+        //    {
+        //        //Debug.Log("tiles:" + mapJson[i][t][0].ToString());
+        //        TileVO newTile = new TileVO();
+        //        if (Enum.IsDefined(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str))
+        //        {
+        //            newTile.Category = (TileTypeCategory)Enum.Parse(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+        //        }
+        //        else
+        //        {
+        //            Debug.Log("Enum not defined: " + mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+        //        }
 
-                newTile.PositionX = int.Parse(mapJson[i][t][GameConstants.POSITION_X_KEY].str);
-                newTile.PositionY = int.Parse(mapJson[i][t][GameConstants.POSITION_Y_KEY].str);
-                changeTiles.Add(newTile);
-            }
-            newMap.SetTiles(changeTiles.ToArray());
-            Maps.Add(newMap);
-        }
+        //        newTile.PositionX = int.Parse(mapJson[i][t][GameConstants.POSITION_X_KEY].str);
+        //        newTile.PositionY = int.Parse(mapJson[i][t][GameConstants.POSITION_Y_KEY].str);
+        //        changeTiles.Add(newTile);
+        //    }
+        //    newMap.SetTiles(changeTiles.ToArray());
+        //    Maps.Add(newMap);
+        //}
+        Maps = MapsSaver.LoadAllMaps();
     }
 
-    public static string LoadString(string fileName)
-    {
-        string loadedData = default(string);
-        string filePath = Application.persistentDataPath + "/" + fileName;
-        if (File.Exists(filePath))
-        {
-            using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-            {
-                try
-                {
-                    BinaryFormatter bf = new BinaryFormatter();
-                    loadedData = (string)bf.Deserialize(fileStream);
-                }
-                catch (Exception)
-                {
+    //public static string LoadString(string fileName)
+    //{
+    //    string loadedData = default(string);
+    //    string filePath = Application.persistentDataPath + "/" + fileName;
+    //    if (File.Exists(filePath))
+    //    {
+    //        using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+    //        {
+    //            try
+    //            {
+    //                BinaryFormatter bf = new BinaryFormatter();
+    //                loadedData = (string)bf.Deserialize(fileStream);
+    //            }
+    //            catch (Exception)
+    //            {
 
-                }
-            }
-        }
-        return loadedData == default(string) ? "" : loadedData;
+    //            }
+    //        }
+    //    }
+    //    return loadedData == default(string) ? "" : loadedData;
+    //}
+
+    public TileTypeCategory GetTypeOfTile(int x, int y)
+    {
+        return tiles[x, y];
     }
 }

@@ -11,6 +11,16 @@ public class ClickableTile : MonoBehaviour {
 
     private void OnMouseUp()
     {
+        HandleOnMouseUp();
+    }
+
+    public virtual void HandleOnMouseUp()
+    {
         Map.MoveUnit(GridPositionX, GridPositionY);
+    }
+
+    public virtual void HandleTileMaterial()
+    {
+
     }
 }
