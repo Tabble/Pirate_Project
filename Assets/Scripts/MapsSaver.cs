@@ -1,25 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "MapsSaver", menuName = "MapSaver", order = 1)]
 public class MapsSaver : ScriptableObject {
 
-    [SerializeField]
-    private List<MapVO> AllMaps;
+    public List<MapVO> AllMaps = new List<MapVO>();
 
     public void AddNewMap(MapVO newMap)
     {
-        if(AllMaps == null)
-        {
-            AllMaps = new List<MapVO>();
-        }
-        if(newMap != null)
-        {
-            AllMaps.Add(newMap);
-        }
-        AssetDatabase.SaveAssets();
+        AllMaps.Add(newMap);
+        SaveMapData();
     }
 
     public MapVO GetMapWithID(int id)
@@ -34,6 +28,7 @@ public class MapsSaver : ScriptableObject {
         {
             AllMaps.Remove(map);
         }
+        SaveMapData();
         Debug.Log("Delete Map with ID: " + id);
     }
 
@@ -46,15 +41,83 @@ public class MapsSaver : ScriptableObject {
                 AllMaps[i] = newMapVO;
             }
         }
+        SaveMapData();
     }
 
     public List<MapVO> LoadAllMaps()
     {
+        if(AllMaps.Count < 1)
+        {
+            LoadMapData();
+        }
         return AllMaps;
     }
 
-    public void SetAllMaps (List<MapVO> list)
+    private string gameDataProjectFilePath = "/Resources/maps.json";
+
+    private void LoadMapData()
     {
-        AllMaps = list;
+        string filePath = Application.dataPath + gameDataProjectFilePath;
+
+
+        if (File.Exists(filePath))
+        {
+            JSONObject mapJson = new JSONObject(File.ReadAllText(filePath));
+            AllMaps = new List<MapVO>();
+            List<int> MapIDs = new List<int>();
+            //Debug.Log("[Json] show json: " + mapJson.ToString());
+            for (int i = 0; i < mapJson.list.Count; i++)
+            {
+                //Debug.Log("[Json] maps " + mapJson[i].ToString());
+                MapVO newMap = new MapVO();
+                newMap.SetID((int)mapJson[i][0].i);
+                MapIDs.Add(newMap.MapID);
+                Debug.Log("Map ID: " + newMap.MapID);
+                List<TileVO> changeTiles = new List<TileVO>();
+                for (int t = 1; t < mapJson[i].Count; t++)
+                {
+                    //Debug.Log("tiles:" + mapJson[i][t][0].ToString());
+                    TileVO newTile = new TileVO();
+                    if (System.Enum.IsDefined(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str))
+                    {
+                        newTile.Category = (TileTypeCategory)Enum.Parse(typeof(TileTypeCategory), mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+                    }
+                    else
+                    {
+                        Debug.Log("Enum not defined: " + mapJson[i][t][GameConstants.CATEGORY_KEY].str);
+                    }
+
+                    newTile.PositionX = int.Parse(mapJson[i][t][GameConstants.POSITION_X_KEY].str);
+                    newTile.PositionY = int.Parse(mapJson[i][t][GameConstants.POSITION_Y_KEY].str);
+                    changeTiles.Add(newTile);
+                }
+                newMap.SetTiles(changeTiles.ToArray());
+                AllMaps.Add(newMap);
+            }
+            
+            
+        }
+        else
+        {
+
+        }
+    }
+
+    private void SaveMapData()
+    {
+        JSONObject mapsJson = new JSONObject();
+        foreach (var m in AllMaps)
+        {
+            JSONObject map = new JSONObject();
+            map.AddField(GameConstants.MAP_ID_KEY, m.MapID);
+            foreach (var tile in m.Tiles)
+            {
+                map.Add(tile.GetTileJson());
+            }
+            mapsJson.Add(map);
+        }
+        string dataAsJson = mapsJson.ToString();
+        string filePath = Application.dataPath + gameDataProjectFilePath;
+        File.WriteAllText(filePath, dataAsJson);
     }
 }

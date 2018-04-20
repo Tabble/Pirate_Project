@@ -11,4 +11,2118 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adaea3494ca03c34f9efdbe36c27a825, type: 3}
   m_Name: MapsSaver
   m_EditorClassIdentifier: 
-  AllMaps: []
+  AllMaps:
+  - Tiles:
+    - Category: 0
+      PositionX: 0
+      PositionY: 0
+    - Category: 0
+      PositionX: 0
+      PositionY: 1
+    - Category: 0
+      PositionX: 0
+      PositionY: 2
+    - Category: 0
+      PositionX: 0
+      PositionY: 3
+    - Category: 0
+      PositionX: 0
+      PositionY: 4
+    - Category: 0
+      PositionX: 0
+      PositionY: 5
+    - Category: 0
+      PositionX: 0
+      PositionY: 6
+    - Category: 0
+      PositionX: 0
+      PositionY: 7
+    - Category: 0
+      PositionX: 0
+      PositionY: 8
+    - Category: 0
+      PositionX: 0
+      PositionY: 9
+    - Category: 0
+      PositionX: 1
+      PositionY: 0
+    - Category: 0
+      PositionX: 1
+      PositionY: 1
+    - Category: 0
+      PositionX: 1
+      PositionY: 2
+    - Category: 0
+      PositionX: 1
+      PositionY: 3
+    - Category: 0
+      PositionX: 1
+      PositionY: 4
+    - Category: 0
+      PositionX: 1
+      PositionY: 5
+    - Category: 0
+      PositionX: 1
+      PositionY: 6
+    - Category: 0
+      PositionX: 1
+      PositionY: 7
+    - Category: 0
+      PositionX: 1
+      PositionY: 8
+    - Category: 0
+      PositionX: 1
+      PositionY: 9
+    - Category: 0
+      PositionX: 2
+      PositionY: 0
+    - Category: 0
+      PositionX: 2
+      PositionY: 1
+    - Category: 0
+      PositionX: 2
+      PositionY: 2
+    - Category: 0
+      PositionX: 2
+      PositionY: 3
+    - Category: 0
+      PositionX: 2
+      PositionY: 4
+    - Category: 0
+      PositionX: 2
+      PositionY: 5
+    - Category: 0
+      PositionX: 2
+      PositionY: 6
+    - Category: 0
+      PositionX: 2
+      PositionY: 7
+    - Category: 0
+      PositionX: 2
+      PositionY: 8
+    - Category: 0
+      PositionX: 2
+      PositionY: 9
+    - Category: 0
+      PositionX: 3
+      PositionY: 0
+    - Category: 0
+      PositionX: 3
+      PositionY: 1
+    - Category: 0
+      PositionX: 3
+      PositionY: 2
+    - Category: 0
+      PositionX: 3
+      PositionY: 3
+    - Category: 0
+      PositionX: 3
+      PositionY: 4
+    - Category: 0
+      PositionX: 3
+      PositionY: 5
+    - Category: 0
+      PositionX: 3
+      PositionY: 6
+    - Category: 0
+      PositionX: 3
+      PositionY: 7
+    - Category: 0
+      PositionX: 3
+      PositionY: 8
+    - Category: 0
+      PositionX: 3
+      PositionY: 9
+    - Category: 0
+      PositionX: 4
+      PositionY: 0
+    - Category: 0
+      PositionX: 4
+      PositionY: 1
+    - Category: 0
+      PositionX: 4
+      PositionY: 2
+    - Category: 0
+      PositionX: 4
+      PositionY: 3
+    - Category: 0
+      PositionX: 4
+      PositionY: 4
+    - Category: 0
+      PositionX: 4
+      PositionY: 5
+    - Category: 0
+      PositionX: 4
+      PositionY: 6
+    - Category: 0
+      PositionX: 4
+      PositionY: 7
+    - Category: 0
+      PositionX: 4
+      PositionY: 8
+    - Category: 0
+      PositionX: 4
+      PositionY: 9
+    - Category: 0
+      PositionX: 5
+      PositionY: 0
+    - Category: 0
+      PositionX: 5
+      PositionY: 1
+    - Category: 0
+      PositionX: 5
+      PositionY: 2
+    - Category: 0
+      PositionX: 5
+      PositionY: 3
+    - Category: 0
+      PositionX: 5
+      PositionY: 4
+    - Category: 0
+      PositionX: 5
+      PositionY: 5
+    - Category: 0
+      PositionX: 5
+      PositionY: 6
+    - Category: 0
+      PositionX: 5
+      PositionY: 7
+    - Category: 0
+      PositionX: 5
+      PositionY: 8
+    - Category: 0
+      PositionX: 5
+      PositionY: 9
+    - Category: 2
+      PositionX: 6
+      PositionY: 0
+    - Category: 1
+      PositionX: 6
+      PositionY: 1
+    - Category: 1
+      PositionX: 6
+      PositionY: 2
+    - Category: 1
+      PositionX: 6
+      PositionY: 3
+    - Category: 0
+      PositionX: 6
+      PositionY: 4
+    - Category: 0
+      PositionX: 6
+      PositionY: 5
+    - Category: 0
+      PositionX: 6
+      PositionY: 6
+    - Category: 0
+      PositionX: 6
+      PositionY: 7
+    - Category: 0
+      PositionX: 6
+      PositionY: 8
+    - Category: 0
+      PositionX: 6
+      PositionY: 9
+    - Category: 2
+      PositionX: 7
+      PositionY: 0
+    - Category: 1
+      PositionX: 7
+      PositionY: 1
+    - Category: 1
+      PositionX: 7
+      PositionY: 2
+    - Category: 1
+      PositionX: 7
+      PositionY: 3
+    - Category: 0
+      PositionX: 7
+      PositionY: 4
+    - Category: 0
+      PositionX: 7
+      PositionY: 5
+    - Category: 0
+      PositionX: 7
+      PositionY: 6
+    - Category: 0
+      PositionX: 7
+      PositionY: 7
+    - Category: 0
+      PositionX: 7
+      PositionY: 8
+    - Category: 0
+      PositionX: 7
+      PositionY: 9
+    - Category: 2
+      PositionX: 8
+      PositionY: 0
+    - Category: 1
+      PositionX: 8
+      PositionY: 1
+    - Category: 1
+      PositionX: 8
+      PositionY: 2
+    - Category: 1
+      PositionX: 8
+      PositionY: 3
+    - Category: 0
+      PositionX: 8
+      PositionY: 4
+    - Category: 0
+      PositionX: 8
+      PositionY: 5
+    - Category: 0
+      PositionX: 8
+      PositionY: 6
+    - Category: 0
+      PositionX: 8
+      PositionY: 7
+    - Category: 0
+      PositionX: 8
+      PositionY: 8
+    - Category: 0
+      PositionX: 8
+      PositionY: 9
+    - Category: 0
+      PositionX: 9
+      PositionY: 0
+    - Category: 0
+      PositionX: 9
+      PositionY: 1
+    - Category: 0
+      PositionX: 9
+      PositionY: 2
+    - Category: 0
+      PositionX: 9
+      PositionY: 3
+    - Category: 0
+      PositionX: 9
+      PositionY: 4
+    - Category: 0
+      PositionX: 9
+      PositionY: 5
+    - Category: 0
+      PositionX: 9
+      PositionY: 6
+    - Category: 0
+      PositionX: 9
+      PositionY: 7
+    - Category: 0
+      PositionX: 9
+      PositionY: 8
+    - Category: 0
+      PositionX: 9
+      PositionY: 9
+    MapID: 4
+  - Tiles:
+    - Category: 0
+      PositionX: 0
+      PositionY: 0
+    - Category: 0
+      PositionX: 0
+      PositionY: 1
+    - Category: 0
+      PositionX: 0
+      PositionY: 2
+    - Category: 0
+      PositionX: 0
+      PositionY: 3
+    - Category: 0
+      PositionX: 0
+      PositionY: 4
+    - Category: 0
+      PositionX: 0
+      PositionY: 5
+    - Category: 0
+      PositionX: 0
+      PositionY: 6
+    - Category: 0
+      PositionX: 0
+      PositionY: 7
+    - Category: 0
+      PositionX: 0
+      PositionY: 8
+    - Category: 0
+      PositionX: 0
+      PositionY: 9
+    - Category: 0
+      PositionX: 1
+      PositionY: 0
+    - Category: 0
+      PositionX: 1
+      PositionY: 1
+    - Category: 0
+      PositionX: 1
+      PositionY: 2
+    - Category: 0
+      PositionX: 1
+      PositionY: 3
+    - Category: 0
+      PositionX: 1
+      PositionY: 4
+    - Category: 0
+      PositionX: 1
+      PositionY: 5
+    - Category: 0
+      PositionX: 1
+      PositionY: 6
+    - Category: 0
+      PositionX: 1
+      PositionY: 7
+    - Category: 0
+      PositionX: 1
+      PositionY: 8
+    - Category: 0
+      PositionX: 1
+      PositionY: 9
+    - Category: 0
+      PositionX: 2
+      PositionY: 0
+    - Category: 0
+      PositionX: 2
+      PositionY: 1
+    - Category: 0
+      PositionX: 2
+      PositionY: 2
+    - Category: 0
+      PositionX: 2
+      PositionY: 3
+    - Category: 0
+      PositionX: 2
+      PositionY: 4
+    - Category: 1
+      PositionX: 2
+      PositionY: 5
+    - Category: 1
+      PositionX: 2
+      PositionY: 6
+    - Category: 1
+      PositionX: 2
+      PositionY: 7
+    - Category: 0
+      PositionX: 2
+      PositionY: 8
+    - Category: 0
+      PositionX: 2
+      PositionY: 9
+    - Category: 0
+      PositionX: 3
+      PositionY: 0
+    - Category: 0
+      PositionX: 3
+      PositionY: 1
+    - Category: 0
+      PositionX: 3
+      PositionY: 2
+    - Category: 0
+      PositionX: 3
+      PositionY: 3
+    - Category: 0
+      PositionX: 3
+      PositionY: 4
+    - Category: 1
+      PositionX: 3
+      PositionY: 5
+    - Category: 1
+      PositionX: 3
+      PositionY: 6
+    - Category: 1
+      PositionX: 3
+      PositionY: 7
+    - Category: 0
+      PositionX: 3
+      PositionY: 8
+    - Category: 0
+      PositionX: 3
+      PositionY: 9
+    - Category: 0
+      PositionX: 4
+      PositionY: 0
+    - Category: 0
+      PositionX: 4
+      PositionY: 1
+    - Category: 0
+      PositionX: 4
+      PositionY: 2
+    - Category: 0
+      PositionX: 4
+      PositionY: 3
+    - Category: 0
+      PositionX: 4
+      PositionY: 4
+    - Category: 0
+      PositionX: 4
+      PositionY: 5
+    - Category: 0
+      PositionX: 4
+      PositionY: 6
+    - Category: 0
+      PositionX: 4
+      PositionY: 7
+    - Category: 0
+      PositionX: 4
+      PositionY: 8
+    - Category: 0
+      PositionX: 4
+      PositionY: 9
+    - Category: 0
+      PositionX: 5
+      PositionY: 0
+    - Category: 0
+      PositionX: 5
+      PositionY: 1
+    - Category: 0
+      PositionX: 5
+      PositionY: 2
+    - Category: 0
+      PositionX: 5
+      PositionY: 3
+    - Category: 0
+      PositionX: 5
+      PositionY: 4
+    - Category: 0
+      PositionX: 5
+      PositionY: 5
+    - Category: 0
+      PositionX: 5
+      PositionY: 6
+    - Category: 0
+      PositionX: 5
+      PositionY: 7
+    - Category: 0
+      PositionX: 5
+      PositionY: 8
+    - Category: 0
+      PositionX: 5
+      PositionY: 9
+    - Category: 2
+      PositionX: 6
+      PositionY: 0
+    - Category: 1
+      PositionX: 6
+      PositionY: 1
+    - Category: 1
+      PositionX: 6
+      PositionY: 2
+    - Category: 1
+      PositionX: 6
+      PositionY: 3
+    - Category: 0
+      PositionX: 6
+      PositionY: 4
+    - Category: 0
+      PositionX: 6
+      PositionY: 5
+    - Category: 0
+      PositionX: 6
+      PositionY: 6
+    - Category: 0
+      PositionX: 6
+      PositionY: 7
+    - Category: 0
+      PositionX: 6
+      PositionY: 8
+    - Category: 0
+      PositionX: 6
+      PositionY: 9
+    - Category: 2
+      PositionX: 7
+      PositionY: 0
+    - Category: 1
+      PositionX: 7
+      PositionY: 1
+    - Category: 1
+      PositionX: 7
+      PositionY: 2
+    - Category: 1
+      PositionX: 7
+      PositionY: 3
+    - Category: 0
+      PositionX: 7
+      PositionY: 4
+    - Category: 0
+      PositionX: 7
+      PositionY: 5
+    - Category: 0
+      PositionX: 7
+      PositionY: 6
+    - Category: 0
+      PositionX: 7
+      PositionY: 7
+    - Category: 0
+      PositionX: 7
+      PositionY: 8
+    - Category: 0
+      PositionX: 7
+      PositionY: 9
+    - Category: 2
+      PositionX: 8
+      PositionY: 0
+    - Category: 1
+      PositionX: 8
+      PositionY: 1
+    - Category: 1
+      PositionX: 8
+      PositionY: 2
+    - Category: 1
+      PositionX: 8
+      PositionY: 3
+    - Category: 0
+      PositionX: 8
+      PositionY: 4
+    - Category: 0
+      PositionX: 8
+      PositionY: 5
+    - Category: 0
+      PositionX: 8
+      PositionY: 6
+    - Category: 0
+      PositionX: 8
+      PositionY: 7
+    - Category: 0
+      PositionX: 8
+      PositionY: 8
+    - Category: 0
+      PositionX: 8
+      PositionY: 9
+    - Category: 0
+      PositionX: 9
+      PositionY: 0
+    - Category: 0
+      PositionX: 9
+      PositionY: 1
+    - Category: 0
+      PositionX: 9
+      PositionY: 2
+    - Category: 0
+      PositionX: 9
+      PositionY: 3
+    - Category: 0
+      PositionX: 9
+      PositionY: 4
+    - Category: 0
+      PositionX: 9
+      PositionY: 5
+    - Category: 0
+      PositionX: 9
+      PositionY: 6
+    - Category: 0
+      PositionX: 9
+      PositionY: 7
+    - Category: 0
+      PositionX: 9
+      PositionY: 8
+    - Category: 0
+      PositionX: 9
+      PositionY: 9
+    MapID: 16
+  - Tiles:
+    - Category: 0
+      PositionX: 0
+      PositionY: 0
+    - Category: 0
+      PositionX: 0
+      PositionY: 1
+    - Category: 0
+      PositionX: 0
+      PositionY: 2
+    - Category: 0
+      PositionX: 0
+      PositionY: 3
+    - Category: 0
+      PositionX: 0
+      PositionY: 4
+    - Category: 0
+      PositionX: 0
+      PositionY: 5
+    - Category: 0
+      PositionX: 0
+      PositionY: 6
+    - Category: 0
+      PositionX: 0
+      PositionY: 7
+    - Category: 0
+      PositionX: 0
+      PositionY: 8
+    - Category: 0
+      PositionX: 0
+      PositionY: 9
+    - Category: 0
+      PositionX: 1
+      PositionY: 0
+    - Category: 0
+      PositionX: 1
+      PositionY: 1
+    - Category: 0
+      PositionX: 1
+      PositionY: 2
+    - Category: 0
+      PositionX: 1
+      PositionY: 3
+    - Category: 0
+      PositionX: 1
+      PositionY: 4
+    - Category: 0
+      PositionX: 1
+      PositionY: 5
+    - Category: 0
+      PositionX: 1
+      PositionY: 6
+    - Category: 0
+      PositionX: 1
+      PositionY: 7
+    - Category: 0
+      PositionX: 1
+      PositionY: 8
+    - Category: 0
+      PositionX: 1
+      PositionY: 9
+    - Category: 0
+      PositionX: 2
+      PositionY: 0
+    - Category: 0
+      PositionX: 2
+      PositionY: 1
+    - Category: 0
+      PositionX: 2
+      PositionY: 2
+    - Category: 0
+      PositionX: 2
+      PositionY: 3
+    - Category: 0
+      PositionX: 2
+      PositionY: 4
+    - Category: 1
+      PositionX: 2
+      PositionY: 5
+    - Category: 1
+      PositionX: 2
+      PositionY: 6
+    - Category: 1
+      PositionX: 2
+      PositionY: 7
+    - Category: 0
+      PositionX: 2
+      PositionY: 8
+    - Category: 0
+      PositionX: 2
+      PositionY: 9
+    - Category: 0
+      PositionX: 3
+      PositionY: 0
+    - Category: 0
+      PositionX: 3
+      PositionY: 1
+    - Category: 0
+      PositionX: 3
+      PositionY: 2
+    - Category: 0
+      PositionX: 3
+      PositionY: 3
+    - Category: 0
+      PositionX: 3
+      PositionY: 4
+    - Category: 1
+      PositionX: 3
+      PositionY: 5
+    - Category: 1
+      PositionX: 3
+      PositionY: 6
+    - Category: 1
+      PositionX: 3
+      PositionY: 7
+    - Category: 0
+      PositionX: 3
+      PositionY: 8
+    - Category: 0
+      PositionX: 3
+      PositionY: 9
+    - Category: 0
+      PositionX: 4
+      PositionY: 0
+    - Category: 0
+      PositionX: 4
+      PositionY: 1
+    - Category: 0
+      PositionX: 4
+      PositionY: 2
+    - Category: 0
+      PositionX: 4
+      PositionY: 3
+    - Category: 0
+      PositionX: 4
+      PositionY: 4
+    - Category: 0
+      PositionX: 4
+      PositionY: 5
+    - Category: 0
+      PositionX: 4
+      PositionY: 6
+    - Category: 0
+      PositionX: 4
+      PositionY: 7
+    - Category: 0
+      PositionX: 4
+      PositionY: 8
+    - Category: 0
+      PositionX: 4
+      PositionY: 9
+    - Category: 0
+      PositionX: 5
+      PositionY: 0
+    - Category: 0
+      PositionX: 5
+      PositionY: 1
+    - Category: 0
+      PositionX: 5
+      PositionY: 2
+    - Category: 0
+      PositionX: 5
+      PositionY: 3
+    - Category: 0
+      PositionX: 5
+      PositionY: 4
+    - Category: 0
+      PositionX: 5
+      PositionY: 5
+    - Category: 0
+      PositionX: 5
+      PositionY: 6
+    - Category: 0
+      PositionX: 5
+      PositionY: 7
+    - Category: 0
+      PositionX: 5
+      PositionY: 8
+    - Category: 0
+      PositionX: 5
+      PositionY: 9
+    - Category: 2
+      PositionX: 6
+      PositionY: 0
+    - Category: 1
+      PositionX: 6
+      PositionY: 1
+    - Category: 1
+      PositionX: 6
+      PositionY: 2
+    - Category: 1
+      PositionX: 6
+      PositionY: 3
+    - Category: 0
+      PositionX: 6
+      PositionY: 4
+    - Category: 0
+      PositionX: 6
+      PositionY: 5
+    - Category: 0
+      PositionX: 6
+      PositionY: 6
+    - Category: 0
+      PositionX: 6
+      PositionY: 7
+    - Category: 0
+      PositionX: 6
+      PositionY: 8
+    - Category: 0
+      PositionX: 6
+      PositionY: 9
+    - Category: 2
+      PositionX: 7
+      PositionY: 0
+    - Category: 1
+      PositionX: 7
+      PositionY: 1
+    - Category: 1
+      PositionX: 7
+      PositionY: 2
+    - Category: 1
+      PositionX: 7
+      PositionY: 3
+    - Category: 0
+      PositionX: 7
+      PositionY: 4
+    - Category: 0
+      PositionX: 7
+      PositionY: 5
+    - Category: 0
+      PositionX: 7
+      PositionY: 6
+    - Category: 0
+      PositionX: 7
+      PositionY: 7
+    - Category: 0
+      PositionX: 7
+      PositionY: 8
+    - Category: 0
+      PositionX: 7
+      PositionY: 9
+    - Category: 2
+      PositionX: 8
+      PositionY: 0
+    - Category: 1
+      PositionX: 8
+      PositionY: 1
+    - Category: 1
+      PositionX: 8
+      PositionY: 2
+    - Category: 1
+      PositionX: 8
+      PositionY: 3
+    - Category: 0
+      PositionX: 8
+      PositionY: 4
+    - Category: 0
+      PositionX: 8
+      PositionY: 5
+    - Category: 0
+      PositionX: 8
+      PositionY: 6
+    - Category: 0
+      PositionX: 8
+      PositionY: 7
+    - Category: 0
+      PositionX: 8
+      PositionY: 8
+    - Category: 0
+      PositionX: 8
+      PositionY: 9
+    - Category: 0
+      PositionX: 9
+      PositionY: 0
+    - Category: 0
+      PositionX: 9
+      PositionY: 1
+    - Category: 0
+      PositionX: 9
+      PositionY: 2
+    - Category: 0
+      PositionX: 9
+      PositionY: 3
+    - Category: 0
+      PositionX: 9
+      PositionY: 4
+    - Category: 0
+      PositionX: 9
+      PositionY: 5
+    - Category: 0
+      PositionX: 9
+      PositionY: 6
+    - Category: 0
+      PositionX: 9
+      PositionY: 7
+    - Category: 0
+      PositionX: 9
+      PositionY: 8
+    - Category: 0
+      PositionX: 9
+      PositionY: 9
+    MapID: 17
+  - Tiles:
+    - Category: 0
+      PositionX: 0
+      PositionY: 0
+    - Category: 0
+      PositionX: 0
+      PositionY: 1
+    - Category: 0
+      PositionX: 0
+      PositionY: 2
+    - Category: 0
+      PositionX: 0
+      PositionY: 3
+    - Category: 0
+      PositionX: 0
+      PositionY: 4
+    - Category: 0
+      PositionX: 0
+      PositionY: 5
+    - Category: 0
+      PositionX: 0
+      PositionY: 6
+    - Category: 0
+      PositionX: 0
+      PositionY: 7
+    - Category: 0
+      PositionX: 0
+      PositionY: 8
+    - Category: 0
+      PositionX: 0
+      PositionY: 9
+    - Category: 0
+      PositionX: 1
+      PositionY: 0
+    - Category: 0
+      PositionX: 1
+      PositionY: 1
+    - Category: 0
+      PositionX: 1
+      PositionY: 2
+    - Category: 0
+      PositionX: 1
+      PositionY: 3
+    - Category: 0
+      PositionX: 1
+      PositionY: 4
+    - Category: 0
+      PositionX: 1
+      PositionY: 5
+    - Category: 0
+      PositionX: 1
+      PositionY: 6
+    - Category: 0
+      PositionX: 1
+      PositionY: 7
+    - Category: 0
+      PositionX: 1
+      PositionY: 8
+    - Category: 0
+      PositionX: 1
+      PositionY: 9
+    - Category: 0
+      PositionX: 2
+      PositionY: 0
+    - Category: 0
+      PositionX: 2
+      PositionY: 1
+    - Category: 0
+      PositionX: 2
+      PositionY: 2
+    - Category: 0
+      PositionX: 2
+      PositionY: 3
+    - Category: 0
+      PositionX: 2
+      PositionY: 4
+    - Category: 1
+      PositionX: 2
+      PositionY: 5
+    - Category: 1
+      PositionX: 2
+      PositionY: 6
+    - Category: 1
+      PositionX: 2
+      PositionY: 7
+    - Category: 0
+      PositionX: 2
+      PositionY: 8
+    - Category: 0
+      PositionX: 2
+      PositionY: 9
+    - Category: 0
+      PositionX: 3
+      PositionY: 0
+    - Category: 0
+      PositionX: 3
+      PositionY: 1
+    - Category: 0
+      PositionX: 3
+      PositionY: 2
+    - Category: 0
+      PositionX: 3
+      PositionY: 3
+    - Category: 0
+      PositionX: 3
+      PositionY: 4
+    - Category: 1
+      PositionX: 3
+      PositionY: 5
+    - Category: 1
+      PositionX: 3
+      PositionY: 6
+    - Category: 1
+      PositionX: 3
+      PositionY: 7
+    - Category: 0
+      PositionX: 3
+      PositionY: 8
+    - Category: 0
+      PositionX: 3
+      PositionY: 9
+    - Category: 0
+      PositionX: 4
+      PositionY: 0
+    - Category: 0
+      PositionX: 4
+      PositionY: 1
+    - Category: 0
+      PositionX: 4
+      PositionY: 2
+    - Category: 0
+      PositionX: 4
+      PositionY: 3
+    - Category: 0
+      PositionX: 4
+      PositionY: 4
+    - Category: 0
+      PositionX: 4
+      PositionY: 5
+    - Category: 0
+      PositionX: 4
+      PositionY: 6
+    - Category: 0
+      PositionX: 4
+      PositionY: 7
+    - Category: 0
+      PositionX: 4
+      PositionY: 8
+    - Category: 0
+      PositionX: 4
+      PositionY: 9
+    - Category: 0
+      PositionX: 5
+      PositionY: 0
+    - Category: 0
+      PositionX: 5
+      PositionY: 1
+    - Category: 0
+      PositionX: 5
+      PositionY: 2
+    - Category: 0
+      PositionX: 5
+      PositionY: 3
+    - Category: 0
+      PositionX: 5
+      PositionY: 4
+    - Category: 0
+      PositionX: 5
+      PositionY: 5
+    - Category: 0
+      PositionX: 5
+      PositionY: 6
+    - Category: 0
+      PositionX: 5
+      PositionY: 7
+    - Category: 0
+      PositionX: 5
+      PositionY: 8
+    - Category: 0
+      PositionX: 5
+      PositionY: 9
+    - Category: 2
+      PositionX: 6
+      PositionY: 0
+    - Category: 1
+      PositionX: 6
+      PositionY: 1
+    - Category: 1
+      PositionX: 6
+      PositionY: 2
+    - Category: 1
+      PositionX: 6
+      PositionY: 3
+    - Category: 0
+      PositionX: 6
+      PositionY: 4
+    - Category: 0
+      PositionX: 6
+      PositionY: 5
+    - Category: 0
+      PositionX: 6
+      PositionY: 6
+    - Category: 0
+      PositionX: 6
+      PositionY: 7
+    - Category: 0
+      PositionX: 6
+      PositionY: 8
+    - Category: 0
+      PositionX: 6
+      PositionY: 9
+    - Category: 2
+      PositionX: 7
+      PositionY: 0
+    - Category: 1
+      PositionX: 7
+      PositionY: 1
+    - Category: 1
+      PositionX: 7
+      PositionY: 2
+    - Category: 1
+      PositionX: 7
+      PositionY: 3
+    - Category: 0
+      PositionX: 7
+      PositionY: 4
+    - Category: 0
+      PositionX: 7
+      PositionY: 5
+    - Category: 0
+      PositionX: 7
+      PositionY: 6
+    - Category: 0
+      PositionX: 7
+      PositionY: 7
+    - Category: 0
+      PositionX: 7
+      PositionY: 8
+    - Category: 0
+      PositionX: 7
+      PositionY: 9
+    - Category: 2
+      PositionX: 8
+      PositionY: 0
+    - Category: 1
+      PositionX: 8
+      PositionY: 1
+    - Category: 1
+      PositionX: 8
+      PositionY: 2
+    - Category: 1
+      PositionX: 8
+      PositionY: 3
+    - Category: 0
+      PositionX: 8
+      PositionY: 4
+    - Category: 0
+      PositionX: 8
+      PositionY: 5
+    - Category: 0
+      PositionX: 8
+      PositionY: 6
+    - Category: 0
+      PositionX: 8
+      PositionY: 7
+    - Category: 0
+      PositionX: 8
+      PositionY: 8
+    - Category: 0
+      PositionX: 8
+      PositionY: 9
+    - Category: 0
+      PositionX: 9
+      PositionY: 0
+    - Category: 0
+      PositionX: 9
+      PositionY: 1
+    - Category: 0
+      PositionX: 9
+      PositionY: 2
+    - Category: 0
+      PositionX: 9
+      PositionY: 3
+    - Category: 0
+      PositionX: 9
+      PositionY: 4
+    - Category: 0
+      PositionX: 9
+      PositionY: 5
+    - Category: 0
+      PositionX: 9
+      PositionY: 6
+    - Category: 0
+      PositionX: 9
+      PositionY: 7
+    - Category: 0
+      PositionX: 9
+      PositionY: 8
+    - Category: 0
+      PositionX: 9
+      PositionY: 9
+    MapID: 18
+  - Tiles:
+    - Category: 0
+      PositionX: 0
+      PositionY: 0
+    - Category: 0
+      PositionX: 0
+      PositionY: 1
+    - Category: 0
+      PositionX: 0
+      PositionY: 2
+    - Category: 0
+      PositionX: 0
+      PositionY: 3
+    - Category: 0
+      PositionX: 0
+      PositionY: 4
+    - Category: 0
+      PositionX: 0
+      PositionY: 5
+    - Category: 0
+      PositionX: 0
+      PositionY: 6
+    - Category: 0
+      PositionX: 0
+      PositionY: 7
+    - Category: 0
+      PositionX: 0
+      PositionY: 8
+    - Category: 0
+      PositionX: 0
+      PositionY: 9
+    - Category: 0
+      PositionX: 1
+      PositionY: 0
+    - Category: 0
+      PositionX: 1
+      PositionY: 1
+    - Category: 0
+      PositionX: 1
+      PositionY: 2
+    - Category: 0
+      PositionX: 1
+      PositionY: 3
+    - Category: 0
+      PositionX: 1
+      PositionY: 4
+    - Category: 0
+      PositionX: 1
+      PositionY: 5
+    - Category: 0
+      PositionX: 1
+      PositionY: 6
+    - Category: 0
+      PositionX: 1
+      PositionY: 7
+    - Category: 0
+      PositionX: 1
+      PositionY: 8
+    - Category: 0
+      PositionX: 1
+      PositionY: 9
+    - Category: 0
+      PositionX: 2
+      PositionY: 0
+    - Category: 0
+      PositionX: 2
+      PositionY: 1
+    - Category: 0
+      PositionX: 2
+      PositionY: 2
+    - Category: 0
+      PositionX: 2
+      PositionY: 3
+    - Category: 0
+      PositionX: 2
+      PositionY: 4
+    - Category: 1
+      PositionX: 2
+      PositionY: 5
+    - Category: 1
+      PositionX: 2
+      PositionY: 6
+    - Category: 1
+      PositionX: 2
+      PositionY: 7
+    - Category: 0
+      PositionX: 2
+      PositionY: 8
+    - Category: 0
+      PositionX: 2
+      PositionY: 9
+    - Category: 0
+      PositionX: 3
+      PositionY: 0
+    - Category: 0
+      PositionX: 3
+      PositionY: 1
+    - Category: 0
+      PositionX: 3
+      PositionY: 2
+    - Category: 0
+      PositionX: 3
+      PositionY: 3
+    - Category: 0
+      PositionX: 3
+      PositionY: 4
+    - Category: 1
+      PositionX: 3
+      PositionY: 5
+    - Category: 1
+      PositionX: 3
+      PositionY: 6
+    - Category: 1
+      PositionX: 3
+      PositionY: 7
+    - Category: 0
+      PositionX: 3
+      PositionY: 8
+    - Category: 0
+      PositionX: 3
+      PositionY: 9
+    - Category: 0
+      PositionX: 4
+      PositionY: 0
+    - Category: 0
+      PositionX: 4
+      PositionY: 1
+    - Category: 0
+      PositionX: 4
+      PositionY: 2
+    - Category: 0
+      PositionX: 4
+      PositionY: 3
+    - Category: 0
+      PositionX: 4
+      PositionY: 4
+    - Category: 0
+      PositionX: 4
+      PositionY: 5
+    - Category: 0
+      PositionX: 4
+      PositionY: 6
+    - Category: 0
+      PositionX: 4
+      PositionY: 7
+    - Category: 0
+      PositionX: 4
+      PositionY: 8
+    - Category: 0
+      PositionX: 4
+      PositionY: 9
+    - Category: 0
+      PositionX: 5
+      PositionY: 0
+    - Category: 0
+      PositionX: 5
+      PositionY: 1
+    - Category: 0
+      PositionX: 5
+      PositionY: 2
+    - Category: 0
+      PositionX: 5
+      PositionY: 3
+    - Category: 0
+      PositionX: 5
+      PositionY: 4
+    - Category: 0
+      PositionX: 5
+      PositionY: 5
+    - Category: 0
+      PositionX: 5
+      PositionY: 6
+    - Category: 0
+      PositionX: 5
+      PositionY: 7
+    - Category: 0
+      PositionX: 5
+      PositionY: 8
+    - Category: 0
+      PositionX: 5
+      PositionY: 9
+    - Category: 2
+      PositionX: 6
+      PositionY: 0
+    - Category: 1
+      PositionX: 6
+      PositionY: 1
+    - Category: 1
+      PositionX: 6
+      PositionY: 2
+    - Category: 1
+      PositionX: 6
+      PositionY: 3
+    - Category: 0
+      PositionX: 6
+      PositionY: 4
+    - Category: 0
+      PositionX: 6
+      PositionY: 5
+    - Category: 0
+      PositionX: 6
+      PositionY: 6
+    - Category: 0
+      PositionX: 6
+      PositionY: 7
+    - Category: 0
+      PositionX: 6
+      PositionY: 8
+    - Category: 0
+      PositionX: 6
+      PositionY: 9
+    - Category: 2
+      PositionX: 7
+      PositionY: 0
+    - Category: 1
+      PositionX: 7
+      PositionY: 1
+    - Category: 1
+      PositionX: 7
+      PositionY: 2
+    - Category: 1
+      PositionX: 7
+      PositionY: 3
+    - Category: 0
+      PositionX: 7
+      PositionY: 4
+    - Category: 0
+      PositionX: 7
+      PositionY: 5
+    - Category: 0
+      PositionX: 7
+      PositionY: 6
+    - Category: 0
+      PositionX: 7
+      PositionY: 7
+    - Category: 0
+      PositionX: 7
+      PositionY: 8
+    - Category: 0
+      PositionX: 7
+      PositionY: 9
+    - Category: 2
+      PositionX: 8
+      PositionY: 0
+    - Category: 1
+      PositionX: 8
+      PositionY: 1
+    - Category: 1
+      PositionX: 8
+      PositionY: 2
+    - Category: 1
+      PositionX: 8
+      PositionY: 3
+    - Category: 0
+      PositionX: 8
+      PositionY: 4
+    - Category: 0
+      PositionX: 8
+      PositionY: 5
+    - Category: 0
+      PositionX: 8
+      PositionY: 6
+    - Category: 0
+      PositionX: 8
+      PositionY: 7
+    - Category: 0
+      PositionX: 8
+      PositionY: 8
+    - Category: 0
+      PositionX: 8
+      PositionY: 9
+    - Category: 0
+      PositionX: 9
+      PositionY: 0
+    - Category: 0
+      PositionX: 9
+      PositionY: 1
+    - Category: 0
+      PositionX: 9
+      PositionY: 2
+    - Category: 0
+      PositionX: 9
+      PositionY: 3
+    - Category: 0
+      PositionX: 9
+      PositionY: 4
+    - Category: 0
+      PositionX: 9
+      PositionY: 5
+    - Category: 0
+      PositionX: 9
+      PositionY: 6
+    - Category: 0
+      PositionX: 9
+      PositionY: 7
+    - Category: 0
+      PositionX: 9
+      PositionY: 8
+    - Category: 0
+      PositionX: 9
+      PositionY: 9
+    MapID: 19
+  - Tiles:
+    - Category: 0
+      PositionX: 0
+      PositionY: 0
+    - Category: 0
+      PositionX: 0
+      PositionY: 1
+    - Category: 0
+      PositionX: 0
+      PositionY: 2
+    - Category: 0
+      PositionX: 0
+      PositionY: 3
+    - Category: 0
+      PositionX: 0
+      PositionY: 4
+    - Category: 0
+      PositionX: 0
+      PositionY: 5
+    - Category: 0
+      PositionX: 0
+      PositionY: 6
+    - Category: 0
+      PositionX: 0
+      PositionY: 7
+    - Category: 0
+      PositionX: 0
+      PositionY: 8
+    - Category: 0
+      PositionX: 0
+      PositionY: 9
+    - Category: 0
+      PositionX: 1
+      PositionY: 0
+    - Category: 0
+      PositionX: 1
+      PositionY: 1
+    - Category: 0
+      PositionX: 1
+      PositionY: 2
+    - Category: 0
+      PositionX: 1
+      PositionY: 3
+    - Category: 0
+      PositionX: 1
+      PositionY: 4
+    - Category: 0
+      PositionX: 1
+      PositionY: 5
+    - Category: 0
+      PositionX: 1
+      PositionY: 6
+    - Category: 0
+      PositionX: 1
+      PositionY: 7
+    - Category: 0
+      PositionX: 1
+      PositionY: 8
+    - Category: 0
+      PositionX: 1
+      PositionY: 9
+    - Category: 0
+      PositionX: 2
+      PositionY: 0
+    - Category: 0
+      PositionX: 2
+      PositionY: 1
+    - Category: 0
+      PositionX: 2
+      PositionY: 2
+    - Category: 0
+      PositionX: 2
+      PositionY: 3
+    - Category: 0
+      PositionX: 2
+      PositionY: 4
+    - Category: 1
+      PositionX: 2
+      PositionY: 5
+    - Category: 1
+      PositionX: 2
+      PositionY: 6
+    - Category: 1
+      PositionX: 2
+      PositionY: 7
+    - Category: 0
+      PositionX: 2
+      PositionY: 8
+    - Category: 0
+      PositionX: 2
+      PositionY: 9
+    - Category: 0
+      PositionX: 3
+      PositionY: 0
+    - Category: 0
+      PositionX: 3
+      PositionY: 1
+    - Category: 0
+      PositionX: 3
+      PositionY: 2
+    - Category: 0
+      PositionX: 3
+      PositionY: 3
+    - Category: 0
+      PositionX: 3
+      PositionY: 4
+    - Category: 1
+      PositionX: 3
+      PositionY: 5
+    - Category: 1
+      PositionX: 3
+      PositionY: 6
+    - Category: 1
+      PositionX: 3
+      PositionY: 7
+    - Category: 0
+      PositionX: 3
+      PositionY: 8
+    - Category: 0
+      PositionX: 3
+      PositionY: 9
+    - Category: 0
+      PositionX: 4
+      PositionY: 0
+    - Category: 0
+      PositionX: 4
+      PositionY: 1
+    - Category: 0
+      PositionX: 4
+      PositionY: 2
+    - Category: 0
+      PositionX: 4
+      PositionY: 3
+    - Category: 0
+      PositionX: 4
+      PositionY: 4
+    - Category: 0
+      PositionX: 4
+      PositionY: 5
+    - Category: 0
+      PositionX: 4
+      PositionY: 6
+    - Category: 0
+      PositionX: 4
+      PositionY: 7
+    - Category: 0
+      PositionX: 4
+      PositionY: 8
+    - Category: 0
+      PositionX: 4
+      PositionY: 9
+    - Category: 0
+      PositionX: 5
+      PositionY: 0
+    - Category: 0
+      PositionX: 5
+      PositionY: 1
+    - Category: 0
+      PositionX: 5
+      PositionY: 2
+    - Category: 0
+      PositionX: 5
+      PositionY: 3
+    - Category: 0
+      PositionX: 5
+      PositionY: 4
+    - Category: 0
+      PositionX: 5
+      PositionY: 5
+    - Category: 0
+      PositionX: 5
+      PositionY: 6
+    - Category: 0
+      PositionX: 5
+      PositionY: 7
+    - Category: 0
+      PositionX: 5
+      PositionY: 8
+    - Category: 0
+      PositionX: 5
+      PositionY: 9
+    - Category: 2
+      PositionX: 6
+      PositionY: 0
+    - Category: 1
+      PositionX: 6
+      PositionY: 1
+    - Category: 1
+      PositionX: 6
+      PositionY: 2
+    - Category: 1
+      PositionX: 6
+      PositionY: 3
+    - Category: 0
+      PositionX: 6
+      PositionY: 4
+    - Category: 0
+      PositionX: 6
+      PositionY: 5
+    - Category: 0
+      PositionX: 6
+      PositionY: 6
+    - Category: 0
+      PositionX: 6
+      PositionY: 7
+    - Category: 0
+      PositionX: 6
+      PositionY: 8
+    - Category: 0
+      PositionX: 6
+      PositionY: 9
+    - Category: 2
+      PositionX: 7
+      PositionY: 0
+    - Category: 1
+      PositionX: 7
+      PositionY: 1
+    - Category: 1
+      PositionX: 7
+      PositionY: 2
+    - Category: 1
+      PositionX: 7
+      PositionY: 3
+    - Category: 0
+      PositionX: 7
+      PositionY: 4
+    - Category: 0
+      PositionX: 7
+      PositionY: 5
+    - Category: 0
+      PositionX: 7
+      PositionY: 6
+    - Category: 0
+      PositionX: 7
+      PositionY: 7
+    - Category: 0
+      PositionX: 7
+      PositionY: 8
+    - Category: 0
+      PositionX: 7
+      PositionY: 9
+    - Category: 2
+      PositionX: 8
+      PositionY: 0
+    - Category: 1
+      PositionX: 8
+      PositionY: 1
+    - Category: 1
+      PositionX: 8
+      PositionY: 2
+    - Category: 1
+      PositionX: 8
+      PositionY: 3
+    - Category: 0
+      PositionX: 8
+      PositionY: 4
+    - Category: 0
+      PositionX: 8
+      PositionY: 5
+    - Category: 0
+      PositionX: 8
+      PositionY: 6
+    - Category: 0
+      PositionX: 8
+      PositionY: 7
+    - Category: 0
+      PositionX: 8
+      PositionY: 8
+    - Category: 0
+      PositionX: 8
+      PositionY: 9
+    - Category: 0
+      PositionX: 9
+      PositionY: 0
+    - Category: 0
+      PositionX: 9
+      PositionY: 1
+    - Category: 0
+      PositionX: 9
+      PositionY: 2
+    - Category: 0
+      PositionX: 9
+      PositionY: 3
+    - Category: 0
+      PositionX: 9
+      PositionY: 4
+    - Category: 0
+      PositionX: 9
+      PositionY: 5
+    - Category: 0
+      PositionX: 9
+      PositionY: 6
+    - Category: 0
+      PositionX: 9
+      PositionY: 7
+    - Category: 0
+      PositionX: 9
+      PositionY: 8
+    - Category: 0
+      PositionX: 9
+      PositionY: 9
+    MapID: 20
+  - Tiles:
+    - Category: 0
+      PositionX: 0
+      PositionY: 0
+    - Category: 0
+      PositionX: 0
+      PositionY: 1
+    - Category: 0
+      PositionX: 0
+      PositionY: 2
+    - Category: 0
+      PositionX: 0
+      PositionY: 3
+    - Category: 0
+      PositionX: 0
+      PositionY: 4
+    - Category: 0
+      PositionX: 0
+      PositionY: 5
+    - Category: 0
+      PositionX: 0
+      PositionY: 6
+    - Category: 0
+      PositionX: 0
+      PositionY: 7
+    - Category: 0
+      PositionX: 0
+      PositionY: 8
+    - Category: 0
+      PositionX: 0
+      PositionY: 9
+    - Category: 0
+      PositionX: 1
+      PositionY: 0
+    - Category: 0
+      PositionX: 1
+      PositionY: 1
+    - Category: 0
+      PositionX: 1
+      PositionY: 2
+    - Category: 0
+      PositionX: 1
+      PositionY: 3
+    - Category: 0
+      PositionX: 1
+      PositionY: 4
+    - Category: 0
+      PositionX: 1
+      PositionY: 5
+    - Category: 0
+      PositionX: 1
+      PositionY: 6
+    - Category: 0
+      PositionX: 1
+      PositionY: 7
+    - Category: 0
+      PositionX: 1
+      PositionY: 8
+    - Category: 0
+      PositionX: 1
+      PositionY: 9
+    - Category: 0
+      PositionX: 2
+      PositionY: 0
+    - Category: 0
+      PositionX: 2
+      PositionY: 1
+    - Category: 0
+      PositionX: 2
+      PositionY: 2
+    - Category: 0
+      PositionX: 2
+      PositionY: 3
+    - Category: 0
+      PositionX: 2
+      PositionY: 4
+    - Category: 1
+      PositionX: 2
+      PositionY: 5
+    - Category: 1
+      PositionX: 2
+      PositionY: 6
+    - Category: 1
+      PositionX: 2
+      PositionY: 7
+    - Category: 0
+      PositionX: 2
+      PositionY: 8
+    - Category: 0
+      PositionX: 2
+      PositionY: 9
+    - Category: 0
+      PositionX: 3
+      PositionY: 0
+    - Category: 0
+      PositionX: 3
+      PositionY: 1
+    - Category: 0
+      PositionX: 3
+      PositionY: 2
+    - Category: 0
+      PositionX: 3
+      PositionY: 3
+    - Category: 0
+      PositionX: 3
+      PositionY: 4
+    - Category: 1
+      PositionX: 3
+      PositionY: 5
+    - Category: 1
+      PositionX: 3
+      PositionY: 6
+    - Category: 1
+      PositionX: 3
+      PositionY: 7
+    - Category: 0
+      PositionX: 3
+      PositionY: 8
+    - Category: 0
+      PositionX: 3
+      PositionY: 9
+    - Category: 0
+      PositionX: 4
+      PositionY: 0
+    - Category: 0
+      PositionX: 4
+      PositionY: 1
+    - Category: 0
+      PositionX: 4
+      PositionY: 2
+    - Category: 0
+      PositionX: 4
+      PositionY: 3
+    - Category: 0
+      PositionX: 4
+      PositionY: 4
+    - Category: 0
+      PositionX: 4
+      PositionY: 5
+    - Category: 0
+      PositionX: 4
+      PositionY: 6
+    - Category: 0
+      PositionX: 4
+      PositionY: 7
+    - Category: 0
+      PositionX: 4
+      PositionY: 8
+    - Category: 0
+      PositionX: 4
+      PositionY: 9
+    - Category: 0
+      PositionX: 5
+      PositionY: 0
+    - Category: 0
+      PositionX: 5
+      PositionY: 1
+    - Category: 0
+      PositionX: 5
+      PositionY: 2
+    - Category: 0
+      PositionX: 5
+      PositionY: 3
+    - Category: 0
+      PositionX: 5
+      PositionY: 4
+    - Category: 0
+      PositionX: 5
+      PositionY: 5
+    - Category: 0
+      PositionX: 5
+      PositionY: 6
+    - Category: 0
+      PositionX: 5
+      PositionY: 7
+    - Category: 0
+      PositionX: 5
+      PositionY: 8
+    - Category: 0
+      PositionX: 5
+      PositionY: 9
+    - Category: 2
+      PositionX: 6
+      PositionY: 0
+    - Category: 1
+      PositionX: 6
+      PositionY: 1
+    - Category: 1
+      PositionX: 6
+      PositionY: 2
+    - Category: 1
+      PositionX: 6
+      PositionY: 3
+    - Category: 0
+      PositionX: 6
+      PositionY: 4
+    - Category: 0
+      PositionX: 6
+      PositionY: 5
+    - Category: 0
+      PositionX: 6
+      PositionY: 6
+    - Category: 0
+      PositionX: 6
+      PositionY: 7
+    - Category: 0
+      PositionX: 6
+      PositionY: 8
+    - Category: 0
+      PositionX: 6
+      PositionY: 9
+    - Category: 2
+      PositionX: 7
+      PositionY: 0
+    - Category: 1
+      PositionX: 7
+      PositionY: 1
+    - Category: 1
+      PositionX: 7
+      PositionY: 2
+    - Category: 1
+      PositionX: 7
+      PositionY: 3
+    - Category: 0
+      PositionX: 7
+      PositionY: 4
+    - Category: 0
+      PositionX: 7
+      PositionY: 5
+    - Category: 0
+      PositionX: 7
+      PositionY: 6
+    - Category: 0
+      PositionX: 7
+      PositionY: 7
+    - Category: 0
+      PositionX: 7
+      PositionY: 8
+    - Category: 0
+      PositionX: 7
+      PositionY: 9
+    - Category: 2
+      PositionX: 8
+      PositionY: 0
+    - Category: 1
+      PositionX: 8
+      PositionY: 1
+    - Category: 1
+      PositionX: 8
+      PositionY: 2
+    - Category: 1
+      PositionX: 8
+      PositionY: 3
+    - Category: 0
+      PositionX: 8
+      PositionY: 4
+    - Category: 0
+      PositionX: 8
+      PositionY: 5
+    - Category: 0
+      PositionX: 8
+      PositionY: 6
+    - Category: 0
+      PositionX: 8
+      PositionY: 7
+    - Category: 0
+      PositionX: 8
+      PositionY: 8
+    - Category: 0
+      PositionX: 8
+      PositionY: 9
+    - Category: 0
+      PositionX: 9
+      PositionY: 0
+    - Category: 0
+      PositionX: 9
+      PositionY: 1
+    - Category: 0
+      PositionX: 9
+      PositionY: 2
+    - Category: 0
+      PositionX: 9
+      PositionY: 3
+    - Category: 0
+      PositionX: 9
+      PositionY: 4
+    - Category: 0
+      PositionX: 9
+      PositionY: 5
+    - Category: 0
+      PositionX: 9
+      PositionY: 6
+    - Category: 0
+      PositionX: 9
+      PositionY: 7
+    - Category: 0
+      PositionX: 9
+      PositionY: 8
+    - Category: 0
+      PositionX: 9
+      PositionY: 9
+    MapID: 21

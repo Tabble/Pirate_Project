@@ -13,7 +13,7 @@ public class MapEditor : Editor {
     public override void OnInspectorGUI()
     {
         map = target as MapGenerator;
-        
+        base.OnInspectorGUI();
         if (map.MapsSaver == null)
         {
             base.OnInspectorGUI();

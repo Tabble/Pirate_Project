@@ -11,3 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34462f598f88ab438d30781de90606d, type: 3}
   m_Name: ConsistentMapID
   m_EditorClassIdentifier: 
+  ConsistentID: 3
