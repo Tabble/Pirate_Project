@@ -28,7 +28,6 @@ public class TileMapControllerSelfmade : MonoBehaviour {
         // create default map tiles
         // Setup selected 
         PlayerUnit.GetComponent<Unit>().Map = this;
-       
         tiles = new TileTypeCategory[mapSizeX, mapSizeY];
 
         GenerateMapData();
@@ -41,41 +40,6 @@ public class TileMapControllerSelfmade : MonoBehaviour {
 
     private void GenerateMapData()
     {
-        //for (int x = 0; x < mapSizeX; x++)
-        //{
-        //    for (int y = 0; y < mapSizeY; y++)
-        //    {
-        //        tiles[x, y] = TileTypeCategory.Water;
-        //    }
-        //}
-
-        //for (int x = 3; x <= 5; x++)
-        //{
-        //    for (int y = 0; y < 4; y++)
-        //    {
-        //        tiles[x, y] = TileTypeCategory.ShallowWater;
-        //    }
-        //}
-
-        ////make an Island
-        //tiles[4, 4] = TileTypeCategory.Island;
-        //tiles[5, 4] = TileTypeCategory.Island;
-        //tiles[6, 4] = TileTypeCategory.Island;
-        //tiles[7, 4] = TileTypeCategory.Island;
-        //tiles[8, 4] = TileTypeCategory.Island;
-        //tiles[4, 5] = TileTypeCategory.Island;
-        //tiles[8, 6] = TileTypeCategory.Island;
-        //tiles[0, 5] = TileTypeCategory.Island;
-        //tiles[1, 5] = TileTypeCategory.Island;
-        //tiles[2, 6] = TileTypeCategory.ShallowWater;
-        //tiles[3, 6] = TileTypeCategory.ShallowWater;
-        //tiles[4, 6] = TileTypeCategory.ShallowWater;
-        //tiles[2, 5] = TileTypeCategory.ShallowWater;
-        //tiles[3, 5] = TileTypeCategory.ShallowWater;
-
-        //// make a goal
-        //tiles[9, 8] = TileTypeCategory.Goal;
-
         LoadMaps();
         MapVO mapWithID = Maps.Find(x => x.MapID == MapID);
         foreach (var tile in mapWithID.Tiles)
@@ -106,9 +70,7 @@ public class TileMapControllerSelfmade : MonoBehaviour {
         {
             for (int y = 0; y < mapSizeY; y++)
             {
-               
-                
-                // 4 way- connection
+               // 4 way- connection
                 if(x > 0)
                 {
                     graph[x, y].Neighbors.Add(graph[x - 1, y]);
@@ -299,8 +261,6 @@ public class TileMapControllerSelfmade : MonoBehaviour {
             }
             
         }
-        
-       // PlayerUnit.transform.position = tile.position;
     }
 
     private bool IsUnitNeighbour(int newX, int newY)
