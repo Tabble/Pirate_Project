@@ -25,6 +25,9 @@ public class TileMapControllerSelfmade : MonoBehaviour {
 
     private void Start()
     {
+        // TODO: change when prototype phase is finished
+        LoadMaps();
+        MapID = Maps[0].MapID;
         // create default map tiles
         // Setup selected 
         PlayerUnit.GetComponent<Unit>().Map = this;
@@ -40,7 +43,7 @@ public class TileMapControllerSelfmade : MonoBehaviour {
 
     private void GenerateMapData()
     {
-        LoadMaps();
+        
         MapVO mapWithID = Maps.Find(x => x.MapID == MapID);
         foreach (var tile in mapWithID.Tiles)
         {
