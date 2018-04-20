@@ -5,7 +5,7 @@ using UnityEditor;
 using System.IO;
 
 [CustomEditor(typeof(MapGenerator))]
-public class MapEditor : Editor {
+public class MapGeneratorEditor : Editor {
 
     public MapsSaver MapsSaver;
     private MapGenerator map;

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(ChangeTile))]
-public class ChangeTileEditor : Editor{
+[CustomEditor(typeof(EditorTile))]
+public class EditorTileEditor : Editor{
 
     public void OnSceneGUI()
     {
@@ -14,9 +14,9 @@ public class ChangeTileEditor : Editor{
             Ray ray = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.gameObject.GetComponent<ChangeTile>() != null)
+                if (hit.collider.gameObject.GetComponent<EditorTile>() != null)
                 {
-                    hit.collider.gameObject.GetComponent<ChangeTile>().OnChangeTile();
+                    hit.collider.gameObject.GetComponent<EditorTile>().OnChangeTile();
                 }
             }
         }

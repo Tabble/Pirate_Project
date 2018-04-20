@@ -5,6 +5,9 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
+/// <summary>
+/// This class handles creating a new map in the Editor
+/// </summary>
 public class MapGenerator : MonoBehaviour {
 
     public ConsistentMapID ConsistentMapID;
@@ -40,8 +43,8 @@ public class MapGenerator : MonoBehaviour {
             {
                 Vector3 tilePosition = new Vector3(-MapSize.x / 2 + 0.5f + x, 0, -MapSize.y / 2 + 0.5f + y);
                 Transform newTile = Instantiate(TilePrefab, tilePosition, Quaternion.Euler(Vector3.right * 90)) as Transform;
-                newTile.GetComponent<ChangeTile>().PositionX = x;
-                newTile.GetComponent<ChangeTile>().PositionY= y;
+                newTile.GetComponent<EditorTile>().PositionX = x;
+                newTile.GetComponent<EditorTile>().PositionY= y;
                 newTile.SetParent(tileParent.transform);
             }
         }
@@ -59,7 +62,7 @@ public class MapGenerator : MonoBehaviour {
             tileParent = new GameObject("Tile Parent");
         }
         MapVO mapWithID = MapsSaver.GetMapWithID(id);
-        List<ChangeTile> tiles = new List<ChangeTile>();
+        List<EditorTile> tiles = new List<EditorTile>();
         if(mapWithID != null)
         {
             for (int x = 0; x < MapSize.x; x++)
@@ -69,7 +72,7 @@ public class MapGenerator : MonoBehaviour {
                     Vector3 tilePosition = new Vector3(-MapSize.x / 2 + 0.5f + x, 0, -MapSize.y / 2 + 0.5f + y);
                     Transform newTile = Instantiate(TilePrefab, tilePosition, Quaternion.Euler(Vector3.right * 90)) as Transform;
                     newTile.SetParent(tileParent.transform);
-                    tiles.Add(newTile.GetComponent<ChangeTile>());
+                    tiles.Add(newTile.GetComponent<EditorTile>());
                 }
             }
             for(int i = 0; i < tiles.Count; i++)
@@ -97,7 +100,6 @@ public class MapGenerator : MonoBehaviour {
 
     public void DeleteMapWithID(int ID)
     {
-        //TODO write function
         MapsSaver.DeleteMapWithID(ID);
         LoadMaps();
     }
@@ -125,7 +127,7 @@ public class MapGenerator : MonoBehaviour {
 
     public void SaveNewMap()
     {
-       ChangeTile[] tiles = tileParent.GetComponentsInChildren<ChangeTile>();
+       EditorTile[] tiles = tileParent.GetComponentsInChildren<EditorTile>();
         mapID = ConsistentMapID.GetConsistantID();
         JSONObject map = new JSONObject();
         map.AddField(GameConstants.MAP_ID_KEY, mapID);
@@ -145,7 +147,7 @@ public class MapGenerator : MonoBehaviour {
     public void OverrideMap(int id)
     {
         
-        ChangeTile[] tiles = tileParent.GetComponentsInChildren<ChangeTile>();
+        EditorTile[] tiles = tileParent.GetComponentsInChildren<EditorTile>();
         MapVO mapWithID = MapsSaver.GetMapWithID(id);
         
         
