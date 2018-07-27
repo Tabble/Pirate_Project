@@ -9,5 +9,4 @@ public class GameConstants {
     public static string MAP_ID_KEY = "MAP_ID";
 
     public static string MAP_FILE_LOCATION = "Maps.txt";
-
 }

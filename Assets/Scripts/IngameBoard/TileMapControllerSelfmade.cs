@@ -8,7 +8,7 @@ using UnityEngine;
 public class TileMapControllerSelfmade : MonoBehaviour {
 
     public MapsSaver MapsSaver;
-    public int MapID = 12;
+    public int MapID = 2;
     public GameObject PlayerUnit;
     public TileType[] tileTypes;
     Node[,] graph;
@@ -90,7 +90,6 @@ public class TileMapControllerSelfmade : MonoBehaviour {
                 {
                     graph[x, y].Neighbors.Add(graph[x, y + 1]);
                 }
-
             }
         }
     }

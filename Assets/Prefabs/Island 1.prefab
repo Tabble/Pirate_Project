@@ -22,10 +22,9 @@ GameObject:
   - component: {fileID: 33010581612890088}
   - component: {fileID: 64413909234056210}
   - component: {fileID: 23835066163376048}
-  - component: {fileID: 114302673561293662}
-  - component: {fileID: 114680187104492584}
+  - component: {fileID: 114531613225307130}
   m_Layer: 0
-  m_Name: Island
+  m_Name: Island 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,32 +98,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114302673561293662
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1920267185717050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47d61f0d72cca93499534e16e0fcc345, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GridPositionX: 0
-  GridPositionY: 0
-  Map: {fileID: 0}
-  MeshRenderer: {fileID: 23835066163376048}
-  DefaultMaterial: {fileID: 2100000, guid: e001817e52422a94b88601ed9dfe567f, type: 2}
-  CornerLeftUp: {fileID: 2100000, guid: 1697d0469302b084185dd74679bb713a, type: 2}
-  LeftMiddle: {fileID: 2100000, guid: f7c4ce1117f48314b98c97de9ca98c3b, type: 2}
-  CornerLeftDown: {fileID: 2100000, guid: 7749d3914cb7b4c4db9b3de2c02ea05d, type: 2}
-  MiddleTop: {fileID: 2100000, guid: eca269f8cbd5a9b4dac57bb52e902fbe, type: 2}
-  MiddleMiddle: {fileID: 2100000, guid: 73f7cb536c7253941a35cdaea467bc9b, type: 2}
-  MiddleDown: {fileID: 2100000, guid: 69376d7f113def14dafe09fb1085e74d, type: 2}
-  CornerRightUp: {fileID: 2100000, guid: 08957029a1cdb3b409d5c923acaf1195, type: 2}
-  RightMiddle: {fileID: 2100000, guid: 60a55db3f0beadb4297c7aae23a5085a, type: 2}
-  CornerRightDown: {fileID: 2100000, guid: 3e8538bf1ac086846a32f4dacadf8996, type: 2}
---- !u!114 &114680187104492584
+--- !u!114 &114531613225307130
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -137,6 +111,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RuleTiles:
   - TileSprite: {fileID: 0}
-    _rulesRowOne: 000000000000000000000000
-    _rulesRowTwo: 
-    _rulesRowThree: 
+    _rulesRowTwo: 000000000000000000000000
+    _rulesRowThree: 000000000000000000000000
