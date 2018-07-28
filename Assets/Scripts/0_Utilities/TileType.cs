@@ -14,5 +14,6 @@ public enum TileTypeCategory
     Island = 1,
     ShallowWater = 2,
     Goal = 3,
-    Start = 4
+    Start = 4,
+    Edge = 99
 }

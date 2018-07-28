@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ClickableTile : MonoBehaviour {
 
+    [HideInInspector]
     public int GridPositionX;
+    [HideInInspector]
     public int GridPositionY;
+    [HideInInspector]
     public TileMapGameController Map;
 
 

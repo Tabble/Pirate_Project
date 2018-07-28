@@ -284,6 +284,8 @@ public class TileMapGameController : MonoBehaviour {
 
     public TileTypeCategory GetTypeOfTile(int x, int y)
     {
-        return tiles[x, y];
+        if (x >= 0 && x <= 8 && y >= 0 && y <= 8)
+            return tiles[x, y];
+        else return TileTypeCategory.Edge;
     }
 }
