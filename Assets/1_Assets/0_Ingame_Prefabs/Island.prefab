@@ -142,3 +142,15 @@ MonoBehaviour:
   - Neighbors: 0101000100000000
     Sprite: {fileID: 0}
     Material: {fileID: 2100000, guid: 3e8538bf1ac086846a32f4dacadf8996, type: 2}
+  - Neighbors: 0000000000000000
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: 426e856db8ecdbd47beba51d27bbd46a, type: 2}
+  - Neighbors: 0000000100000000
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: 0abd3cdf938fdee45a89e338183b735b, type: 2}
+  - Neighbors: 0000000001000000
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: 458fc3116471c2549a2e2b2db3519f63, type: 2}
+  - Neighbors: 0000000101000000
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: af075c4e689891d44b4697aa3297a06e, type: 2}
