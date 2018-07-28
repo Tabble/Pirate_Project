@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33010581612890088}
   - component: {fileID: 64413909234056210}
   - component: {fileID: 23835066163376048}
-  - component: {fileID: 114531613225307130}
+  - component: {fileID: 114797673465886476}
   m_Layer: 0
   m_Name: Island 1
   m_TagString: Untagged
@@ -98,7 +98,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114531613225307130
+--- !u!114 &114797673465886476
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -106,10 +106,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1920267185717050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a6ee580c505bb46bf2d6e2933dc78e, type: 3}
+  m_Script: {fileID: 11500000, guid: 4554e54628490eb47a259d57a00b5e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RuleTiles:
-  - TileSprite: {fileID: 0}
-    _rulesRowTwo: 000000000000000000000000
-    _rulesRowThree: 000000000000000000000000
+  - Neighbors: 0100000000000000000000000000000001000000000000000000000000000000
+    Sprite: {fileID: 21300000, guid: f0e27f32fb58ecd4fbb15dbe2a7875ee, type: 3}
+  - Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
+    Sprite: {fileID: 21300000, guid: a80c24d6bd47f724e92301776f02eaf4, type: 3}
+  - Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
+    Sprite: {fileID: 21300000, guid: b228e8bb53feb7e4896e7e1e0885ae5d, type: 3}
