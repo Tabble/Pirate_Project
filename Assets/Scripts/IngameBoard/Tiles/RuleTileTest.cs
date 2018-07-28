@@ -8,7 +8,7 @@ public class RuleTileTest : ClickableTile {
     public MeshRenderer MeshRenderer;
     public Material DefaultMaterial;
     public List<RuleTile> RuleTiles;
-    public NeighborStatus[] Neighbors;
+    public bool[] Neighbors;
 
 
 
@@ -51,7 +51,7 @@ public class RuleTileTest : ClickableTile {
             bool foundTile = false;
             for (int i = 0; i < 8; i++)
             {
-                if (Neighbors[i] != tile.Neighbors[i])
+                if (Neighbors[i] == tile.Neighbors[i] )
                 {
                     foundTile = false;
                     break;
@@ -73,18 +73,18 @@ public class RuleTileTest : ClickableTile {
 
     private void SetNeighbors()
     {
-        Neighbors = new NeighborStatus[8];
+        Neighbors = new bool[8];
 
-        Neighbors[0] = Map.GetTypeOfTile(GridPositionX - 1, GridPositionY + 1) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
-        Neighbors[1] = Map.GetTypeOfTile(GridPositionX, GridPositionY + 1) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
-        Neighbors[2] = Map.GetTypeOfTile(GridPositionX + 1, GridPositionY + 1) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
+        Neighbors[0] = Map.GetTypeOfTile(GridPositionX - 1, GridPositionY + 1) == TileTypeCategory.Island;
+        Neighbors[1] = Map.GetTypeOfTile(GridPositionX, GridPositionY + 1) == TileTypeCategory.Island;
+        Neighbors[2] = Map.GetTypeOfTile(GridPositionX + 1, GridPositionY + 1) == TileTypeCategory.Island;
 
-        Neighbors[3] = Map.GetTypeOfTile(GridPositionX - 1, GridPositionY ) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
-        Neighbors[4] = Map.GetTypeOfTile(GridPositionX + 1, GridPositionY ) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
+        Neighbors[3] = Map.GetTypeOfTile(GridPositionX - 1, GridPositionY ) == TileTypeCategory.Island;
+        Neighbors[4] = Map.GetTypeOfTile(GridPositionX + 1, GridPositionY ) == TileTypeCategory.Island;
 
-        Neighbors[5] = Map.GetTypeOfTile(GridPositionX - 1, GridPositionY + 1) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
-        Neighbors[6] = Map.GetTypeOfTile(GridPositionX, GridPositionY + 1) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
-        Neighbors[7] = Map.GetTypeOfTile(GridPositionX + 1, GridPositionY + 1) == TileTypeCategory.Island ? NeighborStatus.same : NeighborStatus.no;
+        Neighbors[5] = Map.GetTypeOfTile(GridPositionX - 1, GridPositionY + 1) == TileTypeCategory.Island;
+        Neighbors[6] = Map.GetTypeOfTile(GridPositionX, GridPositionY + 1) == TileTypeCategory.Island;
+        Neighbors[7] = Map.GetTypeOfTile(GridPositionX + 1, GridPositionY + 1) == TileTypeCategory.Island;
     }
 
 }
