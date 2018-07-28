@@ -535,7 +535,7 @@ MonoBehaviour:
       type: 2}
     MovementCost: 2
   - Category: 1
-    TilePrefab: {fileID: 1920267185717050, guid: 3c4a932d97078074babccf2dd8f30497,
+    TilePrefab: {fileID: 1920267185717050, guid: 0eed9835ec79f4f4484050b0a71fc5c1,
       type: 2}
     MovementCost: 1e+19
   - Category: 3

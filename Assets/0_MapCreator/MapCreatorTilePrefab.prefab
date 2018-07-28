@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23573124330929132}
   - component: {fileID: 114453193627816342}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: MapCreatorTilePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
