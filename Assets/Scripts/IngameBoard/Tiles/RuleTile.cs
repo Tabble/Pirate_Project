@@ -5,7 +5,7 @@ public class RuleTile {
 
     [SerializeField]
     public NeighborStatus[] Neighbors = new NeighborStatus[8];
-    public Sprite Sprite;
+    public Texture Sprite;
     public Material Material;
 
 }
