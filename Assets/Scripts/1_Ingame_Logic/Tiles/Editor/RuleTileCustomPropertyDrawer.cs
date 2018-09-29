@@ -12,12 +12,15 @@ public class RuleTileCustomPropertyDrawer : PropertyDrawer
         SerializedProperty rows = property.FindPropertyRelative("Neighbors");
         var spriteRect = new Rect(newPosition.x + 150, newPosition.y, newPosition.width - 300, 20);
         SerializedProperty material = property.FindPropertyRelative("Material");
-        Material materialObject = (Material) material.objectReferenceValue;
         EditorGUI.PropertyField(spriteRect, material, GUIContent.none);
 
-        if(material != null)
+        if(material.objectReferenceValue != null)
         {
-            EditorGUI.DropShadowLabel(new Rect(spriteRect.x +150, spriteRect.y, 50,50), new GUIContent(materialObject.mainTexture));
+            Material materialObject = (Material)material.objectReferenceValue;
+            if(materialObject.mainTexture != null)
+            {
+                EditorGUI.DropShadowLabel(new Rect(spriteRect.x + 150, spriteRect.y, 50, 50), new GUIContent(materialObject.mainTexture));
+            }           
         }
         
 
