@@ -8,7 +8,6 @@
     /// </summary>
     public class MapCreator : MonoBehaviour
     {
-
         public ConsistentMapID ConsistentMapID;
         public MapsSaver MapsSaver;
         public Transform TilePrefab;
@@ -18,7 +17,6 @@
         private List<MapVO> Maps = new List<MapVO>();
         public int[] MapIds;
         public int mapIndex = 0;
-
 
         void Start()
         {
@@ -36,6 +34,7 @@
                 DestroyImmediate(tileParent);
                 tileParent = new GameObject("Tile Parent");
             }
+
             for (int x = 0; x < MapSize.x; x++)
             {
                 for (int y = 0; y < MapSize.y; y++)
@@ -60,6 +59,7 @@
                 DestroyImmediate(tileParent);
                 tileParent = new GameObject("Tile Parent");
             }
+
             MapVO mapWithID = MapsSaver.GetMapWithID(id);
             List<MapCreatorTile> tiles = new List<MapCreatorTile>();
             if (mapWithID != null)
@@ -82,7 +82,6 @@
                     tiles[i].ChangeMaterial();
                 }
             }
-
         }
 
         public void ShowMap(int ID)
@@ -105,7 +104,6 @@
 
         public void LoadMaps()
         {
-
             if (MapsSaver.LoadAllMaps().Count > 0)
             {
                 Maps = MapsSaver.LoadAllMaps();
@@ -120,8 +118,6 @@
             {
                 Debug.Log("[MapGenerator] no maps saved");
             }
-
-
         }
 
         public void SaveNewMap()
@@ -145,10 +141,8 @@
 
         public void OverrideMap(int id)
         {
-
             MapCreatorTile[] tiles = tileParent.GetComponentsInChildren<MapCreatorTile>();
             MapVO mapWithID = MapsSaver.GetMapWithID(id);
-
 
             if (mapWithID != null)
             {
@@ -167,6 +161,5 @@
 
             LoadMaps();
         }
-
     }
 }

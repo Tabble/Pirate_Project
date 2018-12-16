@@ -38,8 +38,13 @@
             Category = (TileTypeCategory)matIndex;
         }
 
-        public void ChangeMaterial()
+        public void ChangeMaterial(TileTypeCategory category = TileTypeCategory.Undefined, bool randomGeneragot = false)
         {
+            if(category != TileTypeCategory.Undefined && randomGeneragot)
+            {
+                Category = category;
+            }
+
             switch (Category)
             {
                 case TileTypeCategory.Goal:

@@ -21,8 +21,7 @@ public class RuleTileCustomPropertyDrawer : PropertyDrawer
             {
                 EditorGUI.DropShadowLabel(new Rect(spriteRect.x + 150, spriteRect.y, 50, 50), new GUIContent(materialObject.mainTexture));
             }           
-        }
-        
+        }       
 
         int index = 0;
         for (int i = 0; i < 3; i++)

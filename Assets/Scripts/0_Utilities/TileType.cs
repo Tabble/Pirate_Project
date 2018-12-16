@@ -10,10 +10,11 @@ public class TileType
 
 public enum TileTypeCategory
 {
-    Water = 0,
-    Island = 1,
-    ShallowWater = 2,
-    Goal = 3,
-    Start = 4,
+    Undefined = 0,
+    Water = 1,
+    Island = 2,
+    ShallowWater = 3,
+    Goal = 4,
+    Start = 5,
     Edge = 99
 }
