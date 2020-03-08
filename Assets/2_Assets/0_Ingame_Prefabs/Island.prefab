@@ -113,8 +113,8 @@ MonoBehaviour:
   GridPositionX: 0
   GridPositionY: 0
   Map: {fileID: 0}
-  DefaultMaterial: {fileID: 2100000, guid: c1d2b484b81c7174280779a623473f1e, type: 2}
-  RuleTileTypeCategory: 1
+  DefaultMaterial: {fileID: 2100000, guid: e001817e52422a94b88601ed9dfe567f, type: 2}
+  RuleTileTypeCategory: 2
   Rules:
   - Neighbors: 0000000001000101
     Sprite: {fileID: 0}
@@ -153,5 +153,20 @@ MonoBehaviour:
     Sprite: {fileID: 0}
     Material: {fileID: 2100000, guid: 458fc3116471c2549a2e2b2db3519f63, type: 2}
   - Neighbors: 0000000101000000
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: af075c4e689891d44b4697aa3297a06e, type: 2}
+  - Neighbors: 0100000001000101
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: 1697d0469302b084185dd74679bb713a, type: 2}
+  - Neighbors: 0001000000000001
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: d730b25cb847cda439f5f48887bdab83, type: 2}
+  - Neighbors: 0000000100000100
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: 08957029a1cdb3b409d5c923acaf1195, type: 2}
+  - Neighbors: 0101000000000100
+    Sprite: {fileID: 0}
+    Material: {fileID: 2100000, guid: 93b9d457c90ed2543835e904a2d01e94, type: 2}
+  - Neighbors: 0000000101000001
     Sprite: {fileID: 0}
     Material: {fileID: 2100000, guid: af075c4e689891d44b4697aa3297a06e, type: 2}

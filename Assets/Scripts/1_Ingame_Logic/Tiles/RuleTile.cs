@@ -83,7 +83,7 @@ public class RuleTile : ClickableTile {
             meshRenderer.material = foundTile ? tile.Material : DefaultMaterial;
             if (foundTile)
             {
-                Debug.Log("Found Tile");
+                //Debug.Log("Found Tile");
                 break;
             }
         }
@@ -125,9 +125,9 @@ public class RuleTile : ClickableTile {
             ? Map.GetTypeOfTile(GridPositionX + 1, GridPositionY - 1) == RuleTileTypeCategory
             : false;
 
-        Debug.Log(string.Format("{0} - {1} - {2}", Neighbors[0], Neighbors[1], Neighbors[2]));
-        Debug.Log(string.Format("{0} -     - {1}", Neighbors[3], Neighbors[4]));
-        Debug.Log(string.Format("{0} - {1} - {2}", Neighbors[5], Neighbors[6], Neighbors[7]));
-        Debug.Log("+++++++++++++++++++++++++++++++++++++++++++++++");
+        //Debug.Log(string.Format("{0} - {1} - {2}", Neighbors[0], Neighbors[1], Neighbors[2]));
+        //Debug.Log(string.Format("{0} -     - {1}", Neighbors[3], Neighbors[4]));
+        //Debug.Log(string.Format("{0} - {1} - {2}", Neighbors[5], Neighbors[6], Neighbors[7]));
+        //Debug.Log("+++++++++++++++++++++++++++++++++++++++++++++++");
     }
 }
